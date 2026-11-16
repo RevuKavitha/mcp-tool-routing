@@ -1,0 +1,72 @@
+{
+ "0.15_hirag": {
+  "router": 88.6,
+  "fallback": 85.1,
+  "diff": 3.5,
+  "lo": 0.0,
+  "hi": 7.0
+ },
+ "0.15_full": {
+  "router": 93.5,
+  "fallback": 92.5,
+  "diff": 1.0,
+  "lo": -1.5,
+  "hi": 4.0
+ },
+ "0.15_flat": {
+  "router": 87.6,
+  "fallback": 83.1,
+  "diff": 4.5,
+  "lo": 1.0,
+  "hi": 8.5
+ },
+ "0.15_colbert": {
+  "router": 90.5,
+  "fallback": 87.1,
+  "diff": 3.5,
+  "lo": 0.0,
+  "hi": 7.0
+ },
+ "0.15_stage1": {
+  "router": 87.6,
+  "fallback": 83.6,
+  "diff": 4.0,
+  "lo": 0.5,
+  "hi": 7.5
+ },
+ "0.1_hirag": {
+  "router": 89.1,
+  "fallback": 85.1,
+  "diff": 4.0,
+  "lo": 1.0,
+  "hi": 7.0
+ },
+ "0.1_full": {
+  "router": 94.0,
+  "fallback": 92.5,
+  "diff": 1.5,
+  "lo": -1.0,
+  "hi": 4.0
+ },
+ "0.1_flat": {
+  "router": 87.1,
+  "fallback": 83.1,
+  "diff": 4.0,
+  "lo": 1.0,
+  "hi": 7.5
+ },
+ "0.1_colbert": {
+  "router": 90.0,
+  "fallback": 87.1,
+  "diff": 3.0,
+  "lo": 0.5,
+  "hi": 6.0
+ },
+ "0.1_stage1": {
+  "router": 87.6,
+  "fallback": 83.6,
+  "diff": 4.0,
+  "lo": 1.0,
+  "hi": 7.0
+ }
+}

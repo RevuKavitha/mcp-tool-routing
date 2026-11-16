@@ -1,0 +1,1294 @@
+{
+ "summary": {
+  "complete": true,
+  "n_total": 60,
+  "method": "flat",
+  "split": "multi",
+  "k": 3,
+  "model": "qwen/qwen3-32b",
+  "n": 60,
+  "accuracy": 40.0,
+  "gold_services_given": 46.666666666666664,
+  "avg_generated_tokens": 115.6,
+  "avg_prompt_tokens": 3943.366666666667,
+  "embed_model": "BAAI/bge-large-en",
+  "prompt": "zh"
+ },
+ "rows": [
+  {
+   "qid": "M000",
+   "query": "Search Wikipedia for representative works of Yu Hua and create a DOCX file with the article content in the /home directory.",
+   "services": [
+    "wiki",
+    "docx_mcp",
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "wiki_search_wikipedia",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "wiki_search_wikipedia",
+    "wiki_get_article",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 154,
+   "prompt_tokens": 6615,
+   "error": null
+  },
+  {
+   "qid": "M001",
+   "query": "Read all contents from /home/demo.docx including tables and images, then search Bing using the document's title for related information.",
+   "services": [
+    "docx_mcp",
+    "bing_search",
+    "arvix_mcp"
+   ],
+   "gold": [
+    "docx_mcp_read_docx",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "docx_mcp_read_docx",
+    "bing_search_bing_search"
+   ],
+   "correct": true,
+   "completion_tokens": 108,
+   "prompt_tokens": 2881,
+   "error": null
+  },
+  {
+   "qid": "M002",
+   "query": "Move or rename the file from /home/test/demo.docx to /home/test1/demo.docx, then read and extract its contents.",
+   "services": [
+    "file_system_mcp",
+    "docx_mcp",
+    "arvix_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_move_file",
+    "docx_mcp_read_docx"
+   ],
+   "called": [
+    "file_system_mcp_move_file",
+    "docx_mcp_read_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 110,
+   "prompt_tokens": 3013,
+   "error": null
+  },
+  {
+   "qid": "M003",
+   "query": "List the commit history of the current GitHub repository branch and save the results as a DOCX file in /home.",
+   "services": [
+    "github_mcp",
+    "arvix_mcp",
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "github_mcp_list_commits",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "github_mcp_list_commits"
+   ],
+   "correct": false,
+   "completion_tokens": 90,
+   "prompt_tokens": 6784,
+   "error": null
+  },
+  {
+   "qid": "M004",
+   "query": "Extract text content from the local PDF file /home/test/demo.pdf and write it into a DOCX file at /home/test/demo.docx.",
+   "services": [
+    "pdf_mcp",
+    "docx_mcp",
+    "arvix_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_local_pdf",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "pdf_mcp_read_local_pdf",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 96,
+   "prompt_tokens": 1946,
+   "error": null
+  },
+  {
+   "qid": "M005",
+   "query": "Get the current time in your timezone and search Bing for the latest trending events.",
+   "services": [
+    "time",
+    "bing_search",
+    "NPS"
+   ],
+   "gold": [
+    "time_get_current_time",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "time_get_current_time",
+    "bing_search_bing_search"
+   ],
+   "correct": true,
+   "completion_tokens": 94,
+   "prompt_tokens": 2410,
+   "error": null
+  },
+  {
+   "qid": "M006",
+   "query": "Retrieve the current time and list all calendar holidays or events for this month.",
+   "services": [
+    "ding_talk",
+    "time",
+    "calendar"
+   ],
+   "gold": [
+    "time_get_current_time",
+    "calendar_calcom_list_appointments"
+   ],
+   "called": [
+    "time_get_current_time",
+    "calendar_calcom_list_appointments"
+   ],
+   "correct": true,
+   "completion_tokens": 118,
+   "prompt_tokens": 2670,
+   "error": null
+  },
+  {
+   "qid": "M007",
+   "query": "Extract text from the remote PDF at https://example.com/document.pdf and save it as a DOCX file in /home/test/demo.docx.",
+   "services": [
+    "pdf_mcp",
+    "docx_mcp",
+    "fetch"
+   ],
+   "gold": [
+    "pdf_mcp_read_pdf_url",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "pdf_mcp_read_pdf_url",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 111,
+   "prompt_tokens": 2005,
+   "error": null
+  },
+  {
+   "qid": "M008",
+   "query": "Read the full text from the local PDF /home/test/demo.pdf and search Bing for related topics.",
+   "services": [
+    "bing_search",
+    "pdf_mcp",
+    "Brave"
+   ],
+   "gold": [
+    "pdf_mcp_read_local_pdf",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "pdf_mcp_read_local_pdf",
+    "bing_search_bing_search"
+   ],
+   "correct": true,
+   "completion_tokens": 105,
+   "prompt_tokens": 1292,
+   "error": null
+  },
+  {
+   "qid": "M009",
+   "query": "Retrieve the content of the arXiv paper with ID 123 and write it to a DOCX file in the /home directory.",
+   "services": [
+    "arvix_mcp",
+    "hugging_face_mcp",
+    "docx_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_read_paper",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "arvix_mcp_read_paper",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 96,
+   "prompt_tokens": 3069,
+   "error": null
+  },
+  {
+   "qid": "M010",
+   "query": "Download arXiv paper with ID 123 to local storage, get its PDF link, and read its full text.",
+   "services": [
+    "arvix_mcp",
+    "hugging_face_mcp",
+    "pdf_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_download_paper",
+    "pdf_mcp_read_pdf_url"
+   ],
+   "called": [
+    "arvix_mcp_download_paper",
+    "arvix_mcp_read_paper"
+   ],
+   "correct": false,
+   "completion_tokens": 93,
+   "prompt_tokens": 2716,
+   "error": null
+  },
+  {
+   "qid": "M011",
+   "query": "Calculate Bazi information for a male born on February 1, 1998 (Gregorian), January 1 (Lunar), and save the result in /home/bazi.docx.",
+   "services": [
+    "bazi",
+    "China_location_mcp",
+    "code_mcp"
+   ],
+   "gold": [
+    "bazi_getbazidetail",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "bazi_getbazidetail"
+   ],
+   "correct": false,
+   "completion_tokens": 182,
+   "prompt_tokens": 5873,
+   "error": null
+  },
+  {
+   "qid": "M012",
+   "query": "Get the transcript of Bilibili video with ID 1 and save it as a DOCX file at /home/test/demo.docx.",
+   "services": [
+    "youtube",
+    "bilibili",
+    "docx_mcp"
+   ],
+   "gold": [
+    "bilibili_get_video_content",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "bilibili_load_bilibili_video",
+    "bilibili_get_video_content",
+    "bilibili_export_video_content"
+   ],
+   "correct": false,
+   "completion_tokens": 148,
+   "prompt_tokens": 6592,
+   "error": null
+  },
+  {
+   "qid": "M013",
+   "query": "Search arXiv for BERT_related academic papers and save the content into a DOCX file at /home/test/demo.docx.",
+   "services": [
+    "arvix_mcp",
+    "hugging_face_mcp",
+    "docx_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_search_papers",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "arvix_mcp_search_papers",
+    "arvix_mcp_download_paper",
+    "arvix_mcp_read_paper",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 145,
+   "prompt_tokens": 6291,
+   "error": null
+  },
+  {
+   "qid": "M014",
+   "query": "Read the entire contents of /home/demo.docx and use its title to generate a visual image.",
+   "services": [
+    "docx_mcp",
+    "arvix_mcp",
+    "file_system_mcp"
+   ],
+   "gold": [
+    "docx_mcp_read_docx",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "docx_mcp_read_docx"
+   ],
+   "correct": false,
+   "completion_tokens": 80,
+   "prompt_tokens": 2929,
+   "error": null
+  },
+  {
+   "qid": "M015",
+   "query": "Search for BERT_related research on arXiv and generate a visual image from the search results.",
+   "services": [
+    "github_mcp",
+    "gitlab_mcp",
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_search_papers",
+    "text2image_text_to_image"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 30,
+   "prompt_tokens": 3777,
+   "error": null
+  },
+  {
+   "qid": "M016",
+   "query": "Extract text from /home/test/demo.pdf and generate an image based on the document content.",
+   "services": [
+    "pdf_mcp",
+    "text2image",
+    "arvix_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_local_pdf",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "pdf_mcp_read_local_pdf",
+    "text2image_text_to_image"
+   ],
+   "correct": true,
+   "completion_tokens": 89,
+   "prompt_tokens": 2476,
+   "error": null
+  },
+  {
+   "qid": "M017",
+   "query": "Read the remote PDF from https://example.com/document.pdf and convert its content into a DOCX file saved at /home/test/demo.docx.",
+   "services": [
+    "pdf_mcp",
+    "arvix_mcp",
+    "docx_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_pdf_url",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "pdf_mcp_read_pdf_url",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 101,
+   "prompt_tokens": 2939,
+   "error": null
+  },
+  {
+   "qid": "M018",
+   "query": "Fetch detailed information for Hugging Face model 'Bert_base' and write it into a DOCX file at /home/test/demo.docx.",
+   "services": [
+    "hugging_face_mcp",
+    "fetch",
+    "docx_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_model_info",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "hugging_face_mcp_get_model_info",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 107,
+   "prompt_tokens": 4694,
+   "error": null
+  },
+  {
+   "qid": "M019",
+   "query": "Retrieve info about the Hugging Face model 'Bert_base' and generate an image representing its description.",
+   "services": [
+    "hugging_face_mcp",
+    "image_mcp",
+    "marvel"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_model_info",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "hugging_face_mcp_get_model_info",
+    "image_mcp_generate_image"
+   ],
+   "correct": false,
+   "completion_tokens": 156,
+   "prompt_tokens": 4496,
+   "error": null
+  },
+  {
+   "qid": "M020",
+   "query": "Get dataset information for 'Bert_pre_train_dataset' from Hugging Face and create an image based on its details.",
+   "services": [
+    "hugging_face_mcp",
+    "image_mcp",
+    "youtube"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_dataset_info",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "hugging_face_mcp_get_dataset_info",
+    "image_mcp_generate_image"
+   ],
+   "correct": false,
+   "completion_tokens": 134,
+   "prompt_tokens": 5434,
+   "error": null
+  },
+  {
+   "qid": "M021",
+   "query": "Retrieve detailed description of Hugging Face dataset 'Bert_pre_train_dataset' and save it as a DOCX file in /home/test/demo.docx.",
+   "services": [
+    "hugging_face_mcp",
+    "docx_mcp",
+    "japanese_learning_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_dataset_info",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "hugging_face_mcp_get_dataset_info",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 111,
+   "prompt_tokens": 5010,
+   "error": null
+  },
+  {
+   "qid": "M022",
+   "query": "Get the latest stock quote data in India and save it as a DOCX file at /home/test/demo.docx.",
+   "services": [
+    "stock",
+    "docx_mcp",
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "stock_get_stock_quote",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "stock_get_stock_quote",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 101,
+   "prompt_tokens": 2818,
+   "error": null
+  },
+  {
+   "qid": "M023",
+   "query": "Retrieve the complete Wikipedia article for the book 'To Live', including metadata, and save it to /home/test/demo.docx.",
+   "services": [
+    "wiki",
+    "hugging_face_mcp",
+    "code_mcp"
+   ],
+   "gold": [
+    "wiki_get_article",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "wiki_get_article"
+   ],
+   "correct": false,
+   "completion_tokens": 87,
+   "prompt_tokens": 5327,
+   "error": null
+  },
+  {
+   "qid": "M024",
+   "query": "Get the current time and save this information in a DOCX file located at /home/time_info.docx.",
+   "services": [
+    "time",
+    "China_location_mcp",
+    "docx_mcp"
+   ],
+   "gold": [
+    "time_get_current_time",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "time_get_current_time",
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 103,
+   "prompt_tokens": 3677,
+   "error": null
+  },
+  {
+   "qid": "M025",
+   "query": "Read full content from /home/demo.docx and use its topic to search Wikipedia for more details.",
+   "services": [
+    "wiki",
+    "hugging_face_mcp",
+    "docx_mcp"
+   ],
+   "gold": [
+    "docx_mcp_read_docx",
+    "wiki_search_wikipedia"
+   ],
+   "called": [
+    "docx_mcp_read_docx",
+    "wiki_search_wikipedia"
+   ],
+   "correct": true,
+   "completion_tokens": 99,
+   "prompt_tokens": 4832,
+   "error": null
+  },
+  {
+   "qid": "M026",
+   "query": "Get the description of Hugging Face model 'GPT_2' and use Bing to search for related technical resources.",
+   "services": [
+    "bing_search",
+    "hugging_face_mcp",
+    "wiki"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_model_info",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "hugging_face_mcp_get_model_info",
+    "bing_search_bing_search"
+   ],
+   "correct": true,
+   "completion_tokens": 97,
+   "prompt_tokens": 4307,
+   "error": null
+  },
+  {
+   "qid": "M027",
+   "query": "Extract content from the local PDF file /home/test/demo.pdf and use Wikipedia to find related articles.",
+   "services": [
+    "wiki",
+    "hugging_face_mcp",
+    "pdf_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_local_pdf",
+    "wiki_search_wikipedia"
+   ],
+   "called": [
+    "pdf_mcp_read_local_pdf",
+    "wiki_search_wikipedia"
+   ],
+   "correct": true,
+   "completion_tokens": 104,
+   "prompt_tokens": 4320,
+   "error": null
+  },
+  {
+   "qid": "M028",
+   "query": "Search arXiv for Transformer_related research and use Bing to find interpretation articles or summaries.",
+   "services": [
+    "bing_search",
+    "wiki",
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_search_papers",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "wiki_search_wikipedia",
+    "bing_search_bing_search",
+    "wiki_get_summary",
+    "wiki_get_related_topics"
+   ],
+   "correct": false,
+   "completion_tokens": 115,
+   "prompt_tokens": 5833,
+   "error": null
+  },
+  {
+   "qid": "M029",
+   "query": "List the latest commits from the GitHub repository and search Bing for associated development technologies.",
+   "services": [
+    "github_mcp",
+    "bing_search",
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "github_mcp_list_commits",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "github_mcp_list_commits",
+    "bing_search_bing_search"
+   ],
+   "correct": true,
+   "completion_tokens": 108,
+   "prompt_tokens": 6535,
+   "error": null
+  },
+  {
+   "qid": "M030",
+   "query": "Read the PDF file from https://example.com/research.pdf and search Wikipedia for related subjects.",
+   "services": [
+    "wiki",
+    "hugging_face_mcp",
+    "arvix_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_pdf_url",
+    "wiki_search_wikipedia"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 51,
+   "prompt_tokens": 1512,
+   "error": null
+  },
+  {
+   "qid": "M031",
+   "query": "Fetch transcript from Bilibili video ID 123 and search Bing for related discussions or reviews.",
+   "services": [
+    "bing_search",
+    "youtube",
+    "bilibili"
+   ],
+   "gold": [
+    "bilibili_get_video_content",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "bilibili_export_video_content",
+    "bing_search_bing_search"
+   ],
+   "correct": false,
+   "completion_tokens": 141,
+   "prompt_tokens": 2844,
+   "error": null
+  },
+  {
+   "qid": "M032",
+   "query": "Get Hugging Face dataset info for 'IMDB' and search Wikipedia for its background and applications.",
+   "services": [
+    "wiki",
+    "tmdb_movie",
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_dataset_info",
+    "wiki_search_wikipedia"
+   ],
+   "called": [
+    "hugging_face_mcp_get_dataset_info",
+    "wiki_search_wikipedia"
+   ],
+   "correct": true,
+   "completion_tokens": 100,
+   "prompt_tokens": 2991,
+   "error": null
+  },
+  {
+   "qid": "M033",
+   "query": "Retrieve stock quotes for India and use Bing to search for relevant financial news.",
+   "services": [
+    "bing_search",
+    "stock",
+    "wiki"
+   ],
+   "gold": [
+    "stock_get_stock_quote",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "stock_get_stock_quote",
+    "bing_search_bing_search"
+   ],
+   "correct": true,
+   "completion_tokens": 155,
+   "prompt_tokens": 1740,
+   "error": null
+  },
+  {
+   "qid": "M034",
+   "query": "Search Wikipedia for the full content of the book 'Dream of the Red Chamber' and then use Bing to find literary reviews.",
+   "services": [
+    "wiki",
+    "bing_search",
+    "tmdb_movie"
+   ],
+   "gold": [
+    "wiki_get_article",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "wiki_get_article",
+    "bing_search_bing_search"
+   ],
+   "correct": true,
+   "completion_tokens": 119,
+   "prompt_tokens": 1861,
+   "error": null
+  },
+  {
+   "qid": "M035",
+   "query": "Move the file /home/source/demo.docx to /home/backup/demo.docx and then use its content to search related topics on Wikipedia.",
+   "services": [
+    "wiki",
+    "docx_mcp",
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_move_file",
+    "wiki_search_wikipedia"
+   ],
+   "called": [
+    "docx_mcp_read_docx",
+    "wiki_search_wikipedia"
+   ],
+   "correct": false,
+   "completion_tokens": 92,
+   "prompt_tokens": 4861,
+   "error": null
+  },
+  {
+   "qid": "M036",
+   "query": "Get the current time and search Wikipedia for historical events that occurred on today's date.",
+   "services": [
+    "wiki",
+    "time",
+    "bing_search"
+   ],
+   "gold": [
+    "time_get_current_time",
+    "wiki_search_wikipedia"
+   ],
+   "called": [
+    "time_get_current_time",
+    "wiki_search_wikipedia"
+   ],
+   "correct": true,
+   "completion_tokens": 95,
+   "prompt_tokens": 2107,
+   "error": null
+  },
+  {
+   "qid": "M037",
+   "query": "Read the PDF document /home/data/report.pdf and generate images based on its contents.",
+   "services": [
+    "pdf_mcp",
+    "arvix_mcp",
+    "docx_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_local_pdf",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "pdf_mcp_read_local_pdf"
+   ],
+   "correct": false,
+   "completion_tokens": 71,
+   "prompt_tokens": 1858,
+   "error": null
+  },
+  {
+   "qid": "M038",
+   "query": "Download the arXiv paper with ID 456, get the PDF, and save the paper content into /home/paper.docx.",
+   "services": [
+    "arvix_mcp",
+    "hugging_face_mcp",
+    "marvel"
+   ],
+   "gold": [
+    "arvix_mcp_download_paper",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "arvix_mcp_download_paper"
+   ],
+   "correct": false,
+   "completion_tokens": 63,
+   "prompt_tokens": 4457,
+   "error": null
+  },
+  {
+   "qid": "M039",
+   "query": "Extract transcript from Bilibili video ID 999 and search Wikipedia for relevant discussion topics.",
+   "services": [
+    "wiki",
+    "youtube",
+    "bilibili"
+   ],
+   "gold": [
+    "bilibili_get_video_content",
+    "wiki_search_wikipedia"
+   ],
+   "called": [
+    "bilibili_export_video_content",
+    "wiki_search_wikipedia"
+   ],
+   "correct": false,
+   "completion_tokens": 148,
+   "prompt_tokens": 3299,
+   "error": null
+  },
+  {
+   "qid": "M040",
+   "query": "Search Wikipedia for information about machine learning, save the content to /home/ml_info.docx, then generate a visual image based on the document content.",
+   "services": [
+    "wiki",
+    "hugging_face_mcp",
+    "docx_mcp"
+   ],
+   "gold": [
+    "wiki_search_wikipedia",
+    "docx_mcp_write_docx",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "wiki_search_wikipedia",
+    "wiki_get_article",
+    "docx_mcp_write_docx"
+   ],
+   "correct": false,
+   "completion_tokens": 151,
+   "prompt_tokens": 6609,
+   "error": null
+  },
+  {
+   "qid": "M041",
+   "query": "Get the current time, search Bing for today's tech news, and save the results as a DOCX file at /home/news.docx.",
+   "services": [
+    "bing_search",
+    "time",
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "time_get_current_time",
+    "bing_search_bing_search",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "time_get_current_time",
+    "bing_search_bing_search"
+   ],
+   "correct": false,
+   "completion_tokens": 123,
+   "prompt_tokens": 2817,
+   "error": null
+  },
+  {
+   "qid": "M042",
+   "query": "Read the PDF file from https://example.com/research.pdf, search Wikipedia for related topics, and generate an image from the combined content.",
+   "services": [
+    "wiki",
+    "pdf_mcp",
+    "arvix_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_pdf_url",
+    "wiki_search_wikipedia",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "pdf_mcp_read_pdf_url",
+    "wiki_search_wikipedia"
+   ],
+   "correct": false,
+   "completion_tokens": 140,
+   "prompt_tokens": 2038,
+   "error": null
+  },
+  {
+   "qid": "M043",
+   "query": "Search arXiv for GPT-related papers, save the results to /home/gpt_papers.docx, and search Bing for additional commentary.",
+   "services": [
+    "wiki",
+    "bing_search",
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_search_papers",
+    "docx_mcp_write_docx",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "hugging_face_mcp_search_collections",
+    "hugging_face_mcp_get_collection_info",
+    "bing_search_bing_search"
+   ],
+   "correct": false,
+   "completion_tokens": 178,
+   "prompt_tokens": 5935,
+   "error": null
+  },
+  {
+   "qid": "M044",
+   "query": "Get Hugging Face model info for 'BERT-base-uncased', save it to /home/bert_info.docx, and generate a technical diagram image.",
+   "services": [
+    "hugging_face_mcp",
+    "marvel",
+    "image_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_model_info",
+    "docx_mcp_write_docx",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "hugging_face_mcp_get_model_info",
+    "image_mcp_generate_image"
+   ],
+   "correct": false,
+   "completion_tokens": 182,
+   "prompt_tokens": 4520,
+   "error": null
+  },
+  {
+   "qid": "M045",
+   "query": "Read the local PDF /home/data/report.pdf, search Wikipedia for background information, and save everything to /home/combined_report.docx.",
+   "services": [
+    "hugging_face_mcp",
+    "wiki",
+    "arvix_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_local_pdf",
+    "wiki_search_wikipedia",
+    "docx_mcp_write_docx"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 75,
+   "prompt_tokens": 1521,
+   "error": null
+  },
+  {
+   "qid": "M046",
+   "query": "Get Bilibili video transcript for ID 12345, search Bing for related discussions, and create a visual summary image.",
+   "services": [
+    "bing_search",
+    "youtube",
+    "bilibili"
+   ],
+   "gold": [
+    "bilibili_get_video_content",
+    "bing_search_bing_search",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "bilibili_load_bilibili_video",
+    "bilibili_extract_video_summary",
+    "bing_search_bing_search",
+    "bilibili_export_video_content"
+   ],
+   "correct": false,
+   "completion_tokens": 172,
+   "prompt_tokens": 5890,
+   "error": null
+  },
+  {
+   "qid": "M047",
+   "query": "List GitHub repository commits, save the commit history to /home/commits.docx, and search Wikipedia for related development methodologies.",
+   "services": [
+    "github_mcp",
+    "gitlab_mcp",
+    "wiki"
+   ],
+   "gold": [
+    "github_mcp_list_commits",
+    "docx_mcp_write_docx",
+    "wiki_search_wikipedia"
+   ],
+   "called": [
+    "github_mcp_list_commits",
+    "wiki_search_wikipedia"
+   ],
+   "correct": false,
+   "completion_tokens": 111,
+   "prompt_tokens": 10534,
+   "error": null
+  },
+  {
+   "qid": "M048",
+   "query": "Get stock quotes for India, search Bing for market analysis, and generate a financial chart image.",
+   "services": [
+    "bing_search",
+    "stock",
+    "wiki"
+   ],
+   "gold": [
+    "stock_get_stock_quote",
+    "bing_search_bing_search",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "stock_get_stock_quote",
+    "bing_search_bing_search"
+   ],
+   "correct": false,
+   "completion_tokens": 105,
+   "prompt_tokens": 1745,
+   "error": null
+  },
+  {
+   "qid": "M049",
+   "query": "Move file from /home/source/data.docx to /home/backup/data.docx, read its contents, and search Wikipedia for related information.",
+   "services": [
+    "docx_mcp",
+    "wiki",
+    "arvix_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_move_file",
+    "docx_mcp_read_docx",
+    "wiki_search_wikipedia"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 49,
+   "prompt_tokens": 1130,
+   "error": null
+  },
+  {
+   "qid": "M050",
+   "query": "Get Hugging Face dataset info for 'squad', save it to /home/squad_info.docx, and search Bing for usage examples.",
+   "services": [
+    "bing_search",
+    "hugging_face_mcp",
+    "wiki"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_dataset_info",
+    "docx_mcp_write_docx",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "hugging_face_mcp_get_dataset_info",
+    "bing_search_bing_search"
+   ],
+   "correct": false,
+   "completion_tokens": 116,
+   "prompt_tokens": 2872,
+   "error": null
+  },
+  {
+   "qid": "M051",
+   "query": "Read arXiv paper with ID 2301.12345, search Wikipedia for the paper's topic, and generate an academic illustration image.",
+   "services": [
+    "hugging_face_mcp",
+    "arvix_mcp",
+    "wiki"
+   ],
+   "gold": [
+    "arvix_mcp_read_paper",
+    "wiki_search_wikipedia",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "arvix_mcp_read_paper",
+    "wiki_search_wikipedia"
+   ],
+   "correct": false,
+   "completion_tokens": 137,
+   "prompt_tokens": 4793,
+   "error": null
+  },
+  {
+   "qid": "M052",
+   "query": "Get current time, search Wikipedia for historical events on this date, and save the findings to /home/history.docx.",
+   "services": [
+    "wiki",
+    "time",
+    "bing_search"
+   ],
+   "gold": [
+    "time_get_current_time",
+    "wiki_search_wikipedia",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "time_get_current_time",
+    "wiki_search_wikipedia",
+    "wiki_get_summary"
+   ],
+   "correct": false,
+   "completion_tokens": 119,
+   "prompt_tokens": 4374,
+   "error": null
+  },
+  {
+   "qid": "M053",
+   "query": "Download arXiv paper ID 2023.56789, read its PDF content, and save the extracted text to /home/paper_content.docx.",
+   "services": [
+    "arvix_mcp",
+    "hugging_face_mcp",
+    "pdf_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_download_paper",
+    "pdf_mcp_read_pdf_url",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "arvix_mcp_download_paper",
+    "pdf_mcp_read_local_pdf",
+    "pdf_mcp_read_pdf_url"
+   ],
+   "correct": false,
+   "completion_tokens": 146,
+   "prompt_tokens": 5665,
+   "error": null
+  },
+  {
+   "qid": "M054",
+   "query": "Calculate Bazi details for a person born on March 15, 1990, search Wikipedia for Chinese astrology, and create a cultural illustration image.",
+   "services": [
+    "bazi",
+    "wiki",
+    "code_mcp"
+   ],
+   "gold": [
+    "bazi_getbazidetail",
+    "wiki_search_wikipedia",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "bazi_getbazidetail",
+    "wiki_search_wikipedia"
+   ],
+   "correct": false,
+   "completion_tokens": 184,
+   "prompt_tokens": 4715,
+   "error": null
+  },
+  {
+   "qid": "M055",
+   "query": "Read the DOCX file /home/research.docx, search Bing for recent developments on the topic, and generate a summary image.",
+   "services": [
+    "bing_search",
+    "docx_mcp",
+    "wiki"
+   ],
+   "gold": [
+    "docx_mcp_read_docx",
+    "bing_search_bing_search",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "docx_mcp_read_docx",
+    "bing_search_bing_search"
+   ],
+   "correct": false,
+   "completion_tokens": 110,
+   "prompt_tokens": 3136,
+   "error": null
+  },
+  {
+   "qid": "M056",
+   "query": "Get Wikipedia article for 'Artificial Intelligence', save it to /home/ai_article.docx, and search Bing for latest AI news.",
+   "services": [
+    "wiki",
+    "bing_search",
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "wiki_get_article",
+    "docx_mcp_write_docx",
+    "bing_search_bing_search"
+   ],
+   "called": [
+    "wiki_get_article",
+    "bing_search_bing_search"
+   ],
+   "correct": false,
+   "completion_tokens": 100,
+   "prompt_tokens": 2863,
+   "error": null
+  },
+  {
+   "qid": "M057",
+   "query": "Extract text from remote PDF https://example.com/thesis.pdf, search Wikipedia for the thesis topic, and save combined content to /home/thesis_analysis.docx.",
+   "services": [
+    "wiki",
+    "hugging_face_mcp",
+    "fetch"
+   ],
+   "gold": [
+    "pdf_mcp_read_pdf_url",
+    "wiki_search_wikipedia",
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "fetch_fetch",
+    "wiki_search_wikipedia"
+   ],
+   "correct": false,
+   "completion_tokens": 84,
+   "prompt_tokens": 4843,
+   "error": null
+  },
+  {
+   "qid": "M058",
+   "query": "Get Bilibili video content for ID 98765, save the transcript to /home/video_transcript.docx, and generate a content visualization image.",
+   "services": [
+    "youtube",
+    "bilibili",
+    "docx_mcp"
+   ],
+   "gold": [
+    "bilibili_get_video_content",
+    "docx_mcp_write_docx",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "bilibili_load_bilibili_video",
+    "bilibili_export_video_content",
+    "bilibili_extract_video_summary"
+   ],
+   "correct": false,
+   "completion_tokens": 178,
+   "prompt_tokens": 6656,
+   "error": null
+  },
+  {
+   "qid": "M059",
+   "query": "Search arXiv for transformer architecture papers, search Bing for implementation tutorials, and create a technical architecture diagram image.",
+   "services": [
+    "hugging_face_mcp",
+    "wiki",
+    "bing_search"
+   ],
+   "gold": [
+    "arvix_mcp_search_papers",
+    "bing_search_bing_search",
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "hugging_face_mcp_get_daily_papers",
+    "bing_search_bing_search"
+   ],
+   "correct": false,
+   "completion_tokens": 169,
+   "prompt_tokens": 2855,
+   "error": null
+  }
+ ]
+}

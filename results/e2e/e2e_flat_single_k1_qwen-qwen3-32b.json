@@ -1,0 +1,3408 @@
+{
+ "summary": {
+  "complete": true,
+  "n_total": 201,
+  "method": "flat",
+  "split": "single",
+  "k": 1,
+  "model": "qwen/qwen3-32b",
+  "n": 201,
+  "accuracy": 83.08457711442786,
+  "gold_services_given": 85.57213930348259,
+  "avg_generated_tokens": 42.42786069651741,
+  "avg_prompt_tokens": 1008.1044776119403,
+  "embed_model": "BAAI/bge-large-en",
+  "prompt": "zh"
+ },
+ "rows": [
+  {
+   "qid": "S000",
+   "query": "I want to study, I want to search for papers containing \"large language model\", return maximum 5 papers, and only search those published after 2023 in cs.CL category.",
+   "services": [
+    "arvix_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_search_papers"
+   ],
+   "called": [
+    "arvix_mcp_search_papers"
+   ],
+   "correct": true,
+   "completion_tokens": 59,
+   "prompt_tokens": 458,
+   "error": null
+  },
+  {
+   "qid": "S001",
+   "query": "I want to study, please help me download the paper with ID 2401.12345 from arXiv.",
+   "services": [
+    "arvix_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_download_paper"
+   ],
+   "called": [
+    "arvix_mcp_download_paper"
+   ],
+   "correct": true,
+   "completion_tokens": 35,
+   "prompt_tokens": 448,
+   "error": null
+  },
+  {
+   "qid": "S002",
+   "query": "I want to study, I want to see which papers I have downloaded locally.",
+   "services": [
+    "arvix_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_list_papers"
+   ],
+   "called": [
+    "arvix_mcp_list_papers"
+   ],
+   "correct": true,
+   "completion_tokens": 22,
+   "prompt_tokens": 435,
+   "error": null
+  },
+  {
+   "qid": "S003",
+   "query": "I want to study, please read the downloaded arXiv paper with ID 2401.12345 and tell me its content.",
+   "services": [
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "arvix_mcp_read_paper"
+   ],
+   "called": [
+    "hugging_face_mcp_get_paper_info"
+   ],
+   "correct": false,
+   "completion_tokens": 36,
+   "prompt_tokens": 876,
+   "error": null
+  },
+  {
+   "qid": "S004",
+   "query": "I want to search for models containing \"bert\", can you list the first 10 for me? Is there corresponding research software?",
+   "services": [
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_search_models"
+   ],
+   "called": [
+    "hugging_face_mcp_search_models"
+   ],
+   "correct": true,
+   "completion_tokens": 32,
+   "prompt_tokens": 871,
+   "error": null
+  },
+  {
+   "qid": "S005",
+   "query": "I want to view model introduction and author information for model ID \"gpt2\". Is there corresponding research software?",
+   "services": [
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_model_info"
+   ],
+   "called": [
+    "hugging_face_mcp_get_model_info"
+   ],
+   "correct": true,
+   "completion_tokens": 29,
+   "prompt_tokens": 867,
+   "error": null
+  },
+  {
+   "qid": "S006",
+   "query": "Please list public datasets with tags \"text\" and \"classification\". Is there corresponding research software?",
+   "services": [
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_search_datasets"
+   ],
+   "called": [
+    "hugging_face_mcp_search_datasets"
+   ],
+   "correct": true,
+   "completion_tokens": 42,
+   "prompt_tokens": 863,
+   "error": null
+  },
+  {
+   "qid": "S007",
+   "query": "I need detailed information about dataset \"ag_news\". Is there corresponding research software?",
+   "services": [
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_dataset_info"
+   ],
+   "called": [
+    "hugging_face_mcp_get_dataset_info"
+   ],
+   "correct": true,
+   "completion_tokens": 28,
+   "prompt_tokens": 860,
+   "error": null
+  },
+  {
+   "qid": "S008",
+   "query": "I want to search for Spaces projects using gradio, can you recommend a few? Is there corresponding research software?",
+   "services": [
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_search_spaces"
+   ],
+   "called": [
+    "hugging_face_mcp_search_spaces"
+   ],
+   "correct": true,
+   "completion_tokens": 32,
+   "prompt_tokens": 867,
+   "error": null
+  },
+  {
+   "qid": "S009",
+   "query": "Please get detailed information for Space ID \"huggingface/text-generation\". Is there corresponding research software?",
+   "services": [
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_space_info"
+   ],
+   "called": [
+    "hugging_face_mcp_get_space_info"
+   ],
+   "correct": true,
+   "completion_tokens": 31,
+   "prompt_tokens": 864,
+   "error": null
+  },
+  {
+   "qid": "S010",
+   "query": "I want to learn about research content and implementation projects for paper ID \"paper-1234\". Is there corresponding research software?",
+   "services": [
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_paper_info"
+   ],
+   "called": [
+    "hugging_face_mcp_get_paper_info"
+   ],
+   "correct": true,
+   "completion_tokens": 32,
+   "prompt_tokens": 871,
+   "error": null
+  },
+  {
+   "qid": "S011",
+   "query": "What recommended machine learning papers are there today? Is there corresponding research software?",
+   "services": [
+    "hugging_face_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_daily_papers"
+   ],
+   "called": [
+    "hugging_face_mcp_get_daily_papers"
+   ],
+   "correct": true,
+   "completion_tokens": 23,
+   "prompt_tokens": 859,
+   "error": null
+  },
+  {
+   "qid": "S012",
+   "query": "What collections contain \"transformers\" related resources? Is there corresponding research software?",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_search_collections"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 35,
+   "prompt_tokens": 1036,
+   "error": null
+  },
+  {
+   "qid": "S013",
+   "query": "Please get detailed introduction for collection ID \"open-llm-leaderboard\". Is there corresponding research software?",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "hugging_face_mcp_get_collection_info"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 35,
+   "prompt_tokens": 1557,
+   "error": null
+  },
+  {
+   "qid": "S014",
+   "query": "I want to study code to improve my skills, please tell me what today's LeetCode daily challenge is?",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_daily_challenge"
+   ],
+   "called": [
+    "code_mcp_get_daily_challenge"
+   ],
+   "correct": true,
+   "completion_tokens": 20,
+   "prompt_tokens": 1557,
+   "error": null
+  },
+  {
+   "qid": "S015",
+   "query": "I want to study code, I want to view detailed information about problem \"two-sum\".",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_problem"
+   ],
+   "called": [
+    "code_mcp_get_problem"
+   ],
+   "correct": true,
+   "completion_tokens": 25,
+   "prompt_tokens": 1553,
+   "error": null
+  },
+  {
+   "qid": "S016",
+   "query": "I want to study code, please search for some LeetCode problems with difficulty MEDIUM and tag containing \"array\".",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_search_problems"
+   ],
+   "called": [
+    "code_mcp_search_problems"
+   ],
+   "correct": true,
+   "completion_tokens": 43,
+   "prompt_tokens": 1558,
+   "error": null
+  },
+  {
+   "qid": "S017",
+   "query": "I want to study code, please get personal information for LeetCode username \"Alice123\".",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_user_profile"
+   ],
+   "called": [
+    "code_mcp_get_user_profile"
+   ],
+   "correct": true,
+   "completion_tokens": 27,
+   "prompt_tokens": 1555,
+   "error": null
+  },
+  {
+   "qid": "S018",
+   "query": "I want to study code, I want to view contest ranking information for username \"Bob456\".",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_user_contest_ranking"
+   ],
+   "called": [
+    "code_mcp_get_user_contest_ranking"
+   ],
+   "correct": true,
+   "completion_tokens": 35,
+   "prompt_tokens": 1556,
+   "error": null
+  },
+  {
+   "qid": "S019",
+   "query": "I want to study code, please query what problems user \"Charlie789\" has submitted recently?",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_recent_submissions"
+   ],
+   "called": [
+    "code_mcp_get_recent_submissions"
+   ],
+   "correct": true,
+   "completion_tokens": 34,
+   "prompt_tokens": 1556,
+   "error": null
+  },
+  {
+   "qid": "S020",
+   "query": "I want to study code, what problems has user \"David007\" passed recently?",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_recent_ac_submissions"
+   ],
+   "called": [
+    "code_mcp_get_recent_ac_submissions"
+   ],
+   "correct": true,
+   "completion_tokens": 36,
+   "prompt_tokens": 1554,
+   "error": null
+  },
+  {
+   "qid": "S021",
+   "query": "I want to study code, what is the current LeetCode user login status?",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_user_status"
+   ],
+   "called": [
+    "code_mcp_get_user_status"
+   ],
+   "correct": true,
+   "completion_tokens": 20,
+   "prompt_tokens": 1551,
+   "error": null
+  },
+  {
+   "qid": "S022",
+   "query": "I want to study code, please get detailed submission report for submission ID 123456.",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_problem_submission_report"
+   ],
+   "called": [
+    "code_mcp_get_problem_submission_report"
+   ],
+   "correct": true,
+   "completion_tokens": 30,
+   "prompt_tokens": 1557,
+   "error": null
+  },
+  {
+   "qid": "S023",
+   "query": "I want to study code, please check my progress on problems with difficulty EASY and MEDIUM.",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_problem_progress"
+   ],
+   "called": [
+    "code_mcp_get_problem_progress",
+    "code_mcp_get_problem_progress"
+   ],
+   "correct": true,
+   "completion_tokens": 68,
+   "prompt_tokens": 1555,
+   "error": null
+  },
+  {
+   "qid": "S024",
+   "query": "I want to study code, please get all my Python language problem submission records, return first 20 items.",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_all_submissions"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 50,
+   "prompt_tokens": 1043,
+   "error": null
+  },
+  {
+   "qid": "S025",
+   "query": "I want to study code, I want to search for notes containing keyword \"dynamic programming\".",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_search_notes"
+   ],
+   "called": [
+    "code_mcp_search_notes"
+   ],
+   "correct": true,
+   "completion_tokens": 39,
+   "prompt_tokens": 1553,
+   "error": null
+  },
+  {
+   "qid": "S026",
+   "query": "I want to study code, please get user notes related to problem ID \"1234\".",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_note"
+   ],
+   "called": [
+    "code_mcp_get_note"
+   ],
+   "correct": true,
+   "completion_tokens": 40,
+   "prompt_tokens": 1555,
+   "error": null
+  },
+  {
+   "qid": "S027",
+   "query": "I want to study code, please create a new note for problem \"two-sum\", content is: \"Use hash table to solve\", summary is: \"Common basic problem\".",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_create_note"
+   ],
+   "called": [
+    "code_mcp_create_note"
+   ],
+   "correct": true,
+   "completion_tokens": 43,
+   "prompt_tokens": 1570,
+   "error": null
+  },
+  {
+   "qid": "S028",
+   "query": "I want to study code, I want to update note ID \"note_001\" content to: \"Can add two-pointer solution\", summary to: \"Optimize space\".",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "code_mcp_update_note"
+   ],
+   "called": [
+    "code_mcp_update_note"
+   ],
+   "correct": true,
+   "completion_tokens": 46,
+   "prompt_tokens": 1572,
+   "error": null
+  },
+  {
+   "qid": "S029",
+   "query": "I want to study code, I want to view popular solutions for problem \"two-sum\", limit to 5 results.",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "code_mcp_list_problem_solutions"
+   ],
+   "called": [
+    "gitlab_mcp_search_repositories"
+   ],
+   "correct": false,
+   "completion_tokens": 39,
+   "prompt_tokens": 1044,
+   "error": null
+  },
+  {
+   "qid": "S030",
+   "query": "I want to study code, please get complete content of solution with topicId \"abc123\".",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "code_mcp_get_problem_solution"
+   ],
+   "called": [
+    "gitlab_mcp_get_file_contents"
+   ],
+   "correct": false,
+   "completion_tokens": 49,
+   "prompt_tokens": 1041,
+   "error": null
+  },
+  {
+   "qid": "S031",
+   "query": "Is there corresponding research software? Please count the character count of file /home/notes/日語練習.txt.",
+   "services": [
+    "japanese_learning_mcp"
+   ],
+   "gold": [
+    "japanese_learning_mcp_count_chars"
+   ],
+   "called": [
+    "japanese_learning_mcp_count_chars"
+   ],
+   "correct": true,
+   "completion_tokens": 33,
+   "prompt_tokens": 568,
+   "error": null
+  },
+  {
+   "qid": "S032",
+   "query": "Is there corresponding research software? Count the word count of file /home/notes/日語教材.txt, set language to ja.",
+   "services": [
+    "japanese_learning_mcp"
+   ],
+   "gold": [
+    "japanese_learning_mcp_count_words"
+   ],
+   "called": [
+    "japanese_learning_mcp_count_words"
+   ],
+   "correct": true,
+   "completion_tokens": 38,
+   "prompt_tokens": 571,
+   "error": null
+  },
+  {
+   "qid": "S033",
+   "query": "Is there corresponding research software? How many characters are in the text「こんにちは、世界！」?",
+   "services": [
+    "japanese_learning_mcp"
+   ],
+   "gold": [
+    "japanese_learning_mcp_count_clipboard_chars"
+   ],
+   "called": [
+    "japanese_learning_mcp_count_clipboard_chars"
+   ],
+   "correct": true,
+   "completion_tokens": 30,
+   "prompt_tokens": 563,
+   "error": null
+  },
+  {
+   "qid": "S034",
+   "query": "Is there corresponding research software? How many words are in the text「私は毎日日本語を勉強します」? Set language parameter to ja.",
+   "services": [
+    "japanese_learning_mcp"
+   ],
+   "gold": [
+    "japanese_learning_mcp_count_clipboard_words"
+   ],
+   "called": [
+    "japanese_learning_mcp_count_clipboard_words"
+   ],
+   "correct": true,
+   "completion_tokens": 42,
+   "prompt_tokens": 576,
+   "error": null
+  },
+  {
+   "qid": "S035",
+   "query": "Is there corresponding research software? Please perform linguistic analysis on the following Japanese sentence:「明日は雨が降るかもしれないので、傘を持って行ったほうがいいです。」",
+   "services": [
+    "japanese_learning_mcp"
+   ],
+   "gold": [
+    "japanese_learning_mcp_analyze_text"
+   ],
+   "called": [
+    "japanese_learning_mcp_analyze_text"
+   ],
+   "correct": true,
+   "completion_tokens": 42,
+   "prompt_tokens": 579,
+   "error": null
+  },
+  {
+   "qid": "S036",
+   "query": "Is there corresponding research software? Please analyze the linguistic features of file /home/corpus/japanese_story.txt.",
+   "services": [
+    "japanese_learning_mcp"
+   ],
+   "gold": [
+    "japanese_learning_mcp_analyze_file"
+   ],
+   "called": [
+    "japanese_learning_mcp_analyze_file"
+   ],
+   "correct": true,
+   "completion_tokens": 33,
+   "prompt_tokens": 567,
+   "error": null
+  },
+  {
+   "qid": "S037",
+   "query": "Open multimedia tools, I want to search for the movie \"Avatar\", can you help me check?",
+   "services": [
+    "tmdb_movie"
+   ],
+   "gold": [
+    "tmdb_movie_search_movies"
+   ],
+   "called": [
+    "tmdb_movie_search_movies"
+   ],
+   "correct": true,
+   "completion_tokens": 23,
+   "prompt_tokens": 362,
+   "error": null
+  },
+  {
+   "qid": "S038",
+   "query": "Open multimedia tools, I just watched the movie with ID 550, please recommend some similar movies.",
+   "services": [
+    "tmdb_movie"
+   ],
+   "gold": [
+    "tmdb_movie_get_recommendations"
+   ],
+   "called": [
+    "tmdb_movie_get_recommendations"
+   ],
+   "correct": true,
+   "completion_tokens": 27,
+   "prompt_tokens": 364,
+   "error": null
+  },
+  {
+   "qid": "S039",
+   "query": "Open multimedia tools, please tell me the most popular movies in the past week.",
+   "services": [
+    "tmdb_movie"
+   ],
+   "gold": [
+    "tmdb_movie_get_trending"
+   ],
+   "called": [
+    "tmdb_movie_get_trending"
+   ],
+   "correct": true,
+   "completion_tokens": 25,
+   "prompt_tokens": 358,
+   "error": null
+  },
+  {
+   "qid": "S040",
+   "query": "Multimedia operation: Please load this Bilibili video: https://www.bilibili.com/video/BV1aK4y1X7Kr.",
+   "services": [
+    "bilibili"
+   ],
+   "gold": [
+    "bilibili_load_bilibili_video"
+   ],
+   "called": [
+    "bilibili_load_bilibili_video"
+   ],
+   "correct": true,
+   "completion_tokens": 51,
+   "prompt_tokens": 620,
+   "error": null
+  },
+  {
+   "qid": "S041",
+   "query": "Multimedia operation: Get all content of video ID BV1aK4y1X7Kr.",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "bilibili_get_video_content"
+   ],
+   "called": [
+    "youtube_get_video_details",
+    "youtube_get_transcripts"
+   ],
+   "correct": false,
+   "completion_tokens": 71,
+   "prompt_tokens": 762,
+   "error": null
+  },
+  {
+   "qid": "S042",
+   "query": "Multimedia operation: Search for keyword \"artificial intelligence\" in video BV1aK4y1X7Kr.",
+   "services": [
+    "bilibili"
+   ],
+   "gold": [
+    "bilibili_search_in_video"
+   ],
+   "called": [
+    "bilibili_search_in_video"
+   ],
+   "correct": true,
+   "completion_tokens": 48,
+   "prompt_tokens": 613,
+   "error": null
+  },
+  {
+   "qid": "S043",
+   "query": "Multimedia operation: Please extract and summarize the content of video BV1xQ4y1E7Kr, word limit 1000 words.",
+   "services": [
+    "bilibili"
+   ],
+   "gold": [
+    "bilibili_extract_video_summary"
+   ],
+   "called": [
+    "bilibili_get_video_content"
+   ],
+   "correct": false,
+   "completion_tokens": 34,
+   "prompt_tokens": 620,
+   "error": null
+  },
+  {
+   "qid": "S044",
+   "query": "Please export the content of the video with ID 123456 in JSON format and save it to the default path.",
+   "services": [
+    "bilibili"
+   ],
+   "gold": [
+    "bilibili_export_video_content"
+   ],
+   "called": [
+    "bilibili_export_video_content"
+   ],
+   "correct": true,
+   "completion_tokens": 37,
+   "prompt_tokens": 615,
+   "error": null
+  },
+  {
+   "qid": "S045",
+   "query": "Multimedia operation: Is Bilibili currently logged in?",
+   "services": [
+    "bilibili"
+   ],
+   "gold": [
+    "bilibili_get_bilibili_auth_status"
+   ],
+   "called": [
+    "bilibili_get_bilibili_auth_status"
+   ],
+   "correct": true,
+   "completion_tokens": 23,
+   "prompt_tokens": 600,
+   "error": null
+  },
+  {
+   "qid": "S046",
+   "query": "Open multimedia, my lunar birthday is 1985-08-08 11:00:00, I am male, zi time is calculated as the same day, check my bazi (Chinese astrology).",
+   "services": [
+    "bazi"
+   ],
+   "gold": [
+    "bazi_getbazidetail"
+   ],
+   "called": [
+    "bazi_getbazidetail"
+   ],
+   "correct": true,
+   "completion_tokens": 60,
+   "prompt_tokens": 535,
+   "error": null
+  },
+  {
+   "qid": "S047",
+   "query": "Open multimedia tools, please convert the following text to image: \"Hello, welcome to the text-to-image feature!\"",
+   "services": [
+    "text2image"
+   ],
+   "gold": [
+    "text2image_text_to_image"
+   ],
+   "called": [
+    "text2image_text_to_image"
+   ],
+   "correct": true,
+   "completion_tokens": 33,
+   "prompt_tokens": 756,
+   "error": null
+  },
+  {
+   "qid": "S048",
+   "query": "Open multimedia tools, please help me extract the subtitle content of https://www.youtube.com/watch?v=dQw4w9WgXcQ, language is English.",
+   "services": [
+    "youtube_trans"
+   ],
+   "gold": [
+    "youtube_trans_get_transcript"
+   ],
+   "called": [
+    "youtube_trans_get_transcript"
+   ],
+   "correct": true,
+   "completion_tokens": 46,
+   "prompt_tokens": 342,
+   "error": null
+  },
+  {
+   "qid": "S049",
+   "query": "Open location query tools, please help me get the latitude and longitude coordinates of \"No.1 Zhongguancun Street, Haidian District, Beijing\".",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_geocode"
+   ],
+   "called": [
+    "china_location_mcp_geocode"
+   ],
+   "correct": true,
+   "completion_tokens": 39,
+   "prompt_tokens": 1121,
+   "error": null
+  },
+  {
+   "qid": "S050",
+   "query": "Open location query tools, please tell me which city and area corresponds to coordinates \"39.983424,116.322987\"?",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_reverse_geocode"
+   ],
+   "called": [
+    "china_location_mcp_reverse_geocode"
+   ],
+   "correct": true,
+   "completion_tokens": 44,
+   "prompt_tokens": 1125,
+   "error": null
+  },
+  {
+   "qid": "S051",
+   "query": "Open location query tools, please query the province and city of IP address \"202.108.22.5\".",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_ip_location"
+   ],
+   "called": [
+    "china_location_mcp_ip_location"
+   ],
+   "correct": true,
+   "completion_tokens": 35,
+   "prompt_tokens": 1116,
+   "error": null
+  },
+  {
+   "qid": "S052",
+   "query": "Open location query tools, I want to know the weather conditions in Shenzhen for the next few days.",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_weather_query"
+   ],
+   "called": [
+    "china_location_mcp_weather_query"
+   ],
+   "correct": true,
+   "completion_tokens": 25,
+   "prompt_tokens": 1109,
+   "error": null
+  },
+  {
+   "qid": "S053",
+   "query": "Open location query tools, how should I cycle from \"39.983424,116.322987\" to \"39.908823,116.397470\"?",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_cycling_route"
+   ],
+   "called": [
+    "china_location_mcp_cycling_route"
+   ],
+   "correct": true,
+   "completion_tokens": 69,
+   "prompt_tokens": 1143,
+   "error": null
+  },
+  {
+   "qid": "S054",
+   "query": "Open location query tools, please plan a walking route from \"39.90872,116.39748\" to \"39.99048,116.48113\".",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_walking_route"
+   ],
+   "called": [
+    "china_location_mcp_walking_route"
+   ],
+   "correct": true,
+   "completion_tokens": 65,
+   "prompt_tokens": 1140,
+   "error": null
+  },
+  {
+   "qid": "S055",
+   "query": "Open location query tools, how to drive from \"31.230416,121.473701\" to \"30.572269,104.066541\"?",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_driving_route"
+   ],
+   "called": [
+    "china_location_mcp_driving_route"
+   ],
+   "correct": true,
+   "completion_tokens": 69,
+   "prompt_tokens": 1142,
+   "error": null
+  },
+  {
+   "qid": "S056",
+   "query": "Open location query tools, please plan a public transport route from \"39.984702,116.318417\" to \"39.912345,116.403876\", departure city is Beijing, destination city is also Beijing.",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_public_transport_route"
+   ],
+   "called": [
+    "china_location_mcp_public_transport_route"
+   ],
+   "correct": true,
+   "completion_tokens": 84,
+   "prompt_tokens": 1156,
+   "error": null
+  },
+  {
+   "qid": "S057",
+   "query": "Open location query tools, please calculate the distance and estimated time from \"39.983424,116.322987\" to \"39.908823,116.397470\".",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_distance_measurement"
+   ],
+   "called": [
+    "china_location_mcp_distance_measurement"
+   ],
+   "correct": true,
+   "completion_tokens": 68,
+   "prompt_tokens": 1146,
+   "error": null
+  },
+  {
+   "qid": "S058",
+   "query": "Open location query tools, I want to search for locations with keyword \"coffee shop\" in Guangzhou.",
+   "services": [
+    "Brave"
+   ],
+   "gold": [
+    "china_location_mcp_keyword_search"
+   ],
+   "called": [
+    "brave_brave_local_search"
+   ],
+   "correct": false,
+   "completion_tokens": 35,
+   "prompt_tokens": 306,
+   "error": null
+  },
+  {
+   "qid": "S059",
+   "query": "Open location query tools, please search for \"banks\" within 500 meters of \"39.983424,116.322987\".",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_nearby_search"
+   ],
+   "called": [
+    "china_location_mcp_nearby_search"
+   ],
+   "correct": true,
+   "completion_tokens": 58,
+   "prompt_tokens": 1128,
+   "error": null
+  },
+  {
+   "qid": "S060",
+   "query": "Open location query tools, please query detailed information of POI ID \"B000A8UIN8\".",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "china_location_mcp_detail_search"
+   ],
+   "called": [
+    "china_location_mcp_detail_search"
+   ],
+   "correct": true,
+   "completion_tokens": 32,
+   "prompt_tokens": 1112,
+   "error": null
+  },
+  {
+   "qid": "S061",
+   "query": "Open location query tools, I want to find national parks in California (stateCode=CA) with hiking activities, return maximum 5 results.",
+   "services": [
+    "NPS"
+   ],
+   "gold": [
+    "nps_findparks"
+   ],
+   "called": [
+    "nps_findparks"
+   ],
+   "correct": true,
+   "completion_tokens": 37,
+   "prompt_tokens": 684,
+   "error": null
+  },
+  {
+   "qid": "S062",
+   "query": "Please provide detailed information about Yellowstone National Park. Its parkCode is 'yell'. Also, please open the location software.",
+   "services": [
+    "NPS"
+   ],
+   "gold": [
+    "nps_getparkdetails"
+   ],
+   "called": [
+    "nps_getparkdetails"
+   ],
+   "correct": true,
+   "completion_tokens": 25,
+   "prompt_tokens": 680,
+   "error": null
+  },
+  {
+   "qid": "S063",
+   "query": "Open location query tools, please get current alert information for national park with parkCode grsm, return maximum 3 items.",
+   "services": [
+    "NPS"
+   ],
+   "gold": [
+    "nps_getalerts"
+   ],
+   "called": [
+    "nps_getalerts"
+   ],
+   "correct": true,
+   "completion_tokens": 30,
+   "prompt_tokens": 680,
+   "error": null
+  },
+  {
+   "qid": "S064",
+   "query": "Open location query tools, please list visitor center information for national park with parkCode acad, limit to first 5 results.",
+   "services": [
+    "NPS"
+   ],
+   "gold": [
+    "nps_getvisitorcenters"
+   ],
+   "called": [
+    "nps_getvisitorcenters"
+   ],
+   "correct": true,
+   "completion_tokens": 30,
+   "prompt_tokens": 680,
+   "error": null
+  },
+  {
+   "qid": "S065",
+   "query": "Open location query tools, I want to know campground information for parkCode zion, display maximum 10 items.",
+   "services": [
+    "NPS"
+   ],
+   "gold": [
+    "nps_getcampgrounds"
+   ],
+   "called": [
+    "nps_getcampgrounds"
+   ],
+   "correct": true,
+   "completion_tokens": 31,
+   "prompt_tokens": 679,
+   "error": null
+  },
+  {
+   "qid": "S066",
+   "query": "Open location query tools, please find events held in park with parkCode dena between 2024-08-01 and 2024-08-31, return maximum 5 results.",
+   "services": [
+    "NPS"
+   ],
+   "gold": [
+    "nps_getevents"
+   ],
+   "called": [
+    "nps_getevents"
+   ],
+   "correct": true,
+   "completion_tokens": 62,
+   "prompt_tokens": 702,
+   "error": null
+  },
+  {
+   "qid": "S067",
+   "query": "Open location query tools, I want to get the geographic coordinates of \"Tokyo Tower\", can you help me check?",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "google_location_maps_geocode"
+   ],
+   "called": [
+    "china_location_mcp_keyword_search"
+   ],
+   "correct": false,
+   "completion_tokens": 33,
+   "prompt_tokens": 1112,
+   "error": null
+  },
+  {
+   "qid": "S068",
+   "query": "Open location query tools, please reverse lookup the address information corresponding to latitude 35.6895 and longitude 139.6917.",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "google_location_maps_reverse_geocode"
+   ],
+   "called": [
+    "china_location_mcp_reverse_geocode"
+   ],
+   "correct": false,
+   "completion_tokens": 40,
+   "prompt_tokens": 1122,
+   "error": null
+  },
+  {
+   "qid": "S069",
+   "query": "Open location query tools, help me search for restaurants containing \"sushi\" within 5 kilometers of Tokyo city center.",
+   "services": [
+    "Brave"
+   ],
+   "gold": [
+    "google_location_maps_search_places"
+   ],
+   "called": [
+    "brave_brave_local_search"
+   ],
+   "correct": false,
+   "completion_tokens": 37,
+   "prompt_tokens": 309,
+   "error": null
+  },
+  {
+   "qid": "S070",
+   "query": "Open location query tools, I have a place_id abcdef123456, can you tell me the detailed information about this place?",
+   "services": [
+    "NPS"
+   ],
+   "gold": [
+    "google_location_maps_place_details"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 32,
+   "prompt_tokens": 685,
+   "error": null
+  },
+  {
+   "qid": "S071",
+   "query": "Open location query tools, I want to know the driving distance and time from \"Tokyo Station\" to \"Shibuya Station\".",
+   "services": [
+    "flight_find"
+   ],
+   "gold": [
+    "google_location_maps_distance_matrix"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 20,
+   "prompt_tokens": 492,
+   "error": null
+  },
+  {
+   "qid": "S072",
+   "query": "Open location query tools, please tell me the elevation at latitude 35.6586 and longitude 139.7454.",
+   "services": [
+    "google_location"
+   ],
+   "gold": [
+    "google_location_maps_elevation"
+   ],
+   "called": [
+    "google_location_maps_elevation"
+   ],
+   "correct": true,
+   "completion_tokens": 46,
+   "prompt_tokens": 725,
+   "error": null
+  },
+  {
+   "qid": "S073",
+   "query": "Open location query tools, please plan a walking route from \"Shinjuku Station\" to \"Sensoji Temple\" for me.",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "google_location_maps_directions"
+   ],
+   "called": [
+    "china_location_mcp_walking_route"
+   ],
+   "correct": false,
+   "completion_tokens": 38,
+   "prompt_tokens": 1116,
+   "error": null
+  },
+  {
+   "qid": "S074",
+   "query": "Open location query tools, please help me query the location information of IP address 8.8.8.8.",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "aiwen_aiwen_ip_location"
+   ],
+   "called": [
+    "china_location_mcp_ip_location"
+   ],
+   "correct": false,
+   "completion_tokens": 30,
+   "prompt_tokens": 1112,
+   "error": null
+  },
+  {
+   "qid": "S075",
+   "query": "Open location query tools, please tell me the current network's public IP address and location information.",
+   "services": [
+    "aiwen"
+   ],
+   "gold": [
+    "aiwen_user_network_ip"
+   ],
+   "called": [
+    "aiwen_user_network_ip"
+   ],
+   "correct": true,
+   "completion_tokens": 19,
+   "prompt_tokens": 268,
+   "error": null
+  },
+  {
+   "qid": "S076",
+   "query": "Open calendar management tool, I want to add an appointment for Zhang San (email zhangsan@example.com) on August 1, 2025 from 3 PM to 4 PM with eventTypeId 2, note \"project discussion\"",
+   "services": [
+    "calendar"
+   ],
+   "gold": [
+    "calendar_calcom_add_appointment"
+   ],
+   "called": [
+    "calendar_calcom_add_appointment"
+   ],
+   "correct": true,
+   "completion_tokens": 108,
+   "prompt_tokens": 613,
+   "error": null
+  },
+  {
+   "qid": "S077",
+   "query": "Open calendar management tool, please modify the appointment with ID 789 to August 2 from 9 AM to 10 AM",
+   "services": [
+    "calendar"
+   ],
+   "gold": [
+    "calendar_calcom_update_appointment"
+   ],
+   "called": [
+    "calendar_calcom_update_appointment"
+   ],
+   "correct": true,
+   "completion_tokens": 85,
+   "prompt_tokens": 590,
+   "error": null
+  },
+  {
+   "qid": "S078",
+   "query": "Open calendar management tool, please delete the meeting with appointment ID 321, reason \"client cancellation\".",
+   "services": [
+    "calendar"
+   ],
+   "gold": [
+    "calendar_calcom_delete_appointment"
+   ],
+   "called": [
+    "calendar_calcom_delete_appointment"
+   ],
+   "correct": true,
+   "completion_tokens": 34,
+   "prompt_tokens": 584,
+   "error": null
+  },
+  {
+   "qid": "S079",
+   "query": "Open calendar management tool, I want to view all appointments between July 15, 2025 and July 31, 2025.",
+   "services": [
+    "calendar"
+   ],
+   "gold": [
+    "calendar_calcom_list_appointments"
+   ],
+   "called": [
+    "calendar_calcom_list_appointments"
+   ],
+   "correct": true,
+   "completion_tokens": 48,
+   "prompt_tokens": 596,
+   "error": null
+  },
+  {
+   "qid": "S080",
+   "query": "Time requirement: Please tell me the current time in Shanghai (Asia/Shanghai).",
+   "services": [
+    "time"
+   ],
+   "gold": [
+    "time_get_current_time"
+   ],
+   "called": [
+    "time_get_current_time"
+   ],
+   "correct": true,
+   "completion_tokens": 24,
+   "prompt_tokens": 493,
+   "error": null
+  },
+  {
+   "qid": "S081",
+   "query": "Time requirement: Please convert 6 PM Beijing time (Asia/Shanghai) to Paris time (Europe/Paris).",
+   "services": [
+    "time"
+   ],
+   "gold": [
+    "time_convert_time"
+   ],
+   "called": [
+    "time_convert_time"
+   ],
+   "correct": true,
+   "completion_tokens": 40,
+   "prompt_tokens": 500,
+   "error": null
+  },
+  {
+   "qid": "S082",
+   "query": "Schedule management requirement: Please send a message to the DingTalk group with conversation ID cid123456789: \"The meeting will start in 10 minutes\".",
+   "services": [
+    "ding_talk"
+   ],
+   "gold": [
+    "ding_talk_send_message"
+   ],
+   "called": [
+    "ding_talk_send_message"
+   ],
+   "correct": true,
+   "completion_tokens": 54,
+   "prompt_tokens": 524,
+   "error": null
+  },
+  {
+   "qid": "S083",
+   "query": "Schedule management requirement: Please get the detailed information of the DingTalk group chat with ID cid_123456.",
+   "services": [
+    "ding_talk"
+   ],
+   "gold": [
+    "ding_talk_get_conversation_info"
+   ],
+   "called": [
+    "ding_talk_get_conversation_info"
+   ],
+   "correct": true,
+   "completion_tokens": 33,
+   "prompt_tokens": 512,
+   "error": null
+  },
+  {
+   "qid": "S084",
+   "query": "Schedule management requirement: Please check the DingTalk user information with user_id u_001.",
+   "services": [
+    "ding_talk"
+   ],
+   "gold": [
+    "ding_talk_get_user_info"
+   ],
+   "called": [
+    "ding_talk_get_user_info"
+   ],
+   "correct": true,
+   "completion_tokens": 29,
+   "prompt_tokens": 506,
+   "error": null
+  },
+  {
+   "qid": "S085",
+   "query": "Schedule management requirement: Help me view the calendar schedule for user ID u_123 this week.",
+   "services": [
+    "ding_talk"
+   ],
+   "gold": [
+    "ding_talk_get_calendar_list"
+   ],
+   "called": [
+    "ding_talk_get_calendar_list"
+   ],
+   "correct": true,
+   "completion_tokens": 68,
+   "prompt_tokens": 507,
+   "error": null
+  },
+  {
+   "qid": "S086",
+   "query": "Open corresponding search software, please help me execute an SQL query to find all user information, SQL statement is: SELECT * FROM users;",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "postgresql_query"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 42,
+   "prompt_tokens": 1562,
+   "error": null
+  },
+  {
+   "qid": "S087",
+   "query": "Open search software, please help me search for Airbnb listings in Shanghai, check-in date 2025-08-01, check-out date 2025-08-05, 2 adults, budget between 500-1000 yuan.",
+   "services": [
+    "airbnb"
+   ],
+   "gold": [
+    "airbnb_airbnb_search"
+   ],
+   "called": [
+    "airbnb_airbnb_search"
+   ],
+   "correct": true,
+   "completion_tokens": 81,
+   "prompt_tokens": 502,
+   "error": null
+  },
+  {
+   "qid": "S088",
+   "query": "Open search software, please tell me detailed information about listing ID \"123456\", check-in date 2025-08-01, check-out date 2025-08-05, 2 adults, 1 child.",
+   "services": [
+    "airbnb"
+   ],
+   "gold": [
+    "airbnb_airbnb_listing_details"
+   ],
+   "called": [
+    "airbnb_airbnb_listing_details"
+   ],
+   "correct": true,
+   "completion_tokens": 73,
+   "prompt_tokens": 499,
+   "error": null
+  },
+  {
+   "qid": "S089",
+   "query": "I want to search for round-trip tickets from JFK to ORD, departure date is 2025-09-10, return date is 2025-09-20. Is there corresponding search software?",
+   "services": [
+    "flight_find"
+   ],
+   "gold": [
+    "flight_find_search_flights_tool"
+   ],
+   "called": [
+    "flight_find_search_flights_tool"
+   ],
+   "correct": true,
+   "completion_tokens": 64,
+   "prompt_tokens": 515,
+   "error": null
+  },
+  {
+   "qid": "S090",
+   "query": "How is the airport server running status now? Is there corresponding search software? Is there corresponding search software?",
+   "services": [
+    "flight_find"
+   ],
+   "gold": [
+    "flight_find_server_status"
+   ],
+   "called": [
+    "flight_find_server_status"
+   ],
+   "correct": true,
+   "completion_tokens": 18,
+   "prompt_tokens": 486,
+   "error": null
+  },
+  {
+   "qid": "S091",
+   "query": "Open search software, please help me set Redis key \"user:123\" with value \"Zhang San\" and expiration time of 3600 seconds.",
+   "services": [
+    "redis"
+   ],
+   "gold": [
+    "redis_set"
+   ],
+   "called": [
+    "redis_set"
+   ],
+   "correct": true,
+   "completion_tokens": 42,
+   "prompt_tokens": 418,
+   "error": null
+  },
+  {
+   "qid": "S092",
+   "query": "Open search software, I want to get the value corresponding to key \"user:123\" in Redis.",
+   "services": [
+    "redis"
+   ],
+   "gold": [
+    "redis_get"
+   ],
+   "called": [
+    "redis_get"
+   ],
+   "correct": true,
+   "completion_tokens": 24,
+   "prompt_tokens": 406,
+   "error": null
+  },
+  {
+   "qid": "S093",
+   "query": "Open search software, please delete key \"session:abc\" in Redis.",
+   "services": [
+    "redis"
+   ],
+   "gold": [
+    "redis_delete"
+   ],
+   "called": [
+    "redis_delete"
+   ],
+   "correct": true,
+   "completion_tokens": 22,
+   "prompt_tokens": 398,
+   "error": null
+  },
+  {
+   "qid": "S094",
+   "query": "Open search software, please list all keys in Redis starting with \"user:\".",
+   "services": [
+    "redis"
+   ],
+   "gold": [
+    "redis_list"
+   ],
+   "called": [
+    "redis_list"
+   ],
+   "correct": true,
+   "completion_tokens": 21,
+   "prompt_tokens": 398,
+   "error": null
+  },
+  {
+   "qid": "S095",
+   "query": "Please help me search for keyword \"artificial intelligence\" in Wikipedia, return maximum 5 results. Open search software",
+   "services": [
+    "wiki"
+   ],
+   "gold": [
+    "wiki_search_wikipedia"
+   ],
+   "called": [
+    "wiki_search_wikipedia"
+   ],
+   "correct": true,
+   "completion_tokens": 30,
+   "prompt_tokens": 525,
+   "error": null
+  },
+  {
+   "qid": "S096",
+   "query": "Please help me get the complete article content titled \"machine learning\" on Wikipedia. Open search software",
+   "services": [
+    "wiki"
+   ],
+   "gold": [
+    "wiki_get_article"
+   ],
+   "called": [
+    "wiki_get_article"
+   ],
+   "correct": true,
+   "completion_tokens": 22,
+   "prompt_tokens": 521,
+   "error": null
+  },
+  {
+   "qid": "S097",
+   "query": "I want to view a brief summary of the Wikipedia article \"deep learning\". Open search software",
+   "services": [
+    "wiki"
+   ],
+   "gold": [
+    "wiki_get_summary"
+   ],
+   "called": [
+    "wiki_get_summary"
+   ],
+   "correct": true,
+   "completion_tokens": 22,
+   "prompt_tokens": 520,
+   "error": null
+  },
+  {
+   "qid": "S098",
+   "query": "Please tell me the section structure of Wikipedia article \"natural language processing\". Open search software",
+   "services": [
+    "wiki"
+   ],
+   "gold": [
+    "wiki_get_sections"
+   ],
+   "called": [
+    "wiki_get_sections"
+   ],
+   "correct": true,
+   "completion_tokens": 23,
+   "prompt_tokens": 519,
+   "error": null
+  },
+  {
+   "qid": "S099",
+   "query": "Help me get all links contained in Wikipedia article \"computer vision\". Open search software",
+   "services": [
+    "wiki"
+   ],
+   "gold": [
+    "wiki_get_links"
+   ],
+   "called": [
+    "wiki_get_links"
+   ],
+   "correct": true,
+   "completion_tokens": 22,
+   "prompt_tokens": 518,
+   "error": null
+  },
+  {
+   "qid": "S100",
+   "query": "Please give me a list of topics related to \"neural networks\" on Wikipedia, return maximum 10 results. Open search software",
+   "services": [
+    "wiki"
+   ],
+   "gold": [
+    "wiki_get_related_topics"
+   ],
+   "called": [
+    "wiki_get_related_topics"
+   ],
+   "correct": true,
+   "completion_tokens": 31,
+   "prompt_tokens": 529,
+   "error": null
+  },
+  {
+   "qid": "S101",
+   "query": "Open search software, please help me execute this query statement to query all data in users table: SELECT * FROM users;",
+   "services": [
+    "sqlite"
+   ],
+   "gold": [
+    "sqlite_read_query"
+   ],
+   "called": [
+    "sqlite_read_query"
+   ],
+   "correct": true,
+   "completion_tokens": 25,
+   "prompt_tokens": 459,
+   "error": null
+  },
+  {
+   "qid": "S102",
+   "query": "Open search software sqlite, I want to perform write operation, please help me insert a new user record: INSERT INTO users (id, name) VALUES (1, 'Zhang San');",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "sqlite_write_query"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 44,
+   "prompt_tokens": 1573,
+   "error": null
+  },
+  {
+   "qid": "S103",
+   "query": "Open search software sqlite, please help me create a new table products with fields id and name, SQL statement is: CREATE TABLE products (id INTEGER PRIMARY KEY, name TEXT);",
+   "services": [
+    "sqlite"
+   ],
+   "gold": [
+    "sqlite_create_table"
+   ],
+   "called": [
+    "sqlite_create_table"
+   ],
+   "correct": true,
+   "completion_tokens": 32,
+   "prompt_tokens": 470,
+   "error": null
+  },
+  {
+   "qid": "S104",
+   "query": "Open search software sqlite, please list all table names in the current database.",
+   "services": [
+    "sqlite"
+   ],
+   "gold": [
+    "sqlite_list_tables"
+   ],
+   "called": [
+    "sqlite_list_tables"
+   ],
+   "correct": true,
+   "completion_tokens": 17,
+   "prompt_tokens": 450,
+   "error": null
+  },
+  {
+   "qid": "S105",
+   "query": "Open search software sqlite, please tell me the structure of users table, including all column names and data types.",
+   "services": [
+    "sqlite"
+   ],
+   "gold": [
+    "sqlite_describe_table"
+   ],
+   "called": [
+    "sqlite_describe_table"
+   ],
+   "correct": true,
+   "completion_tokens": 23,
+   "prompt_tokens": 457,
+   "error": null
+  },
+  {
+   "qid": "S106",
+   "query": "Open the search software. I discovered that orders have grown by 40 % over the past three months—please record this business insight.",
+   "services": [
+    "sqlite"
+   ],
+   "gold": [
+    "sqlite_append_insight"
+   ],
+   "called": [
+    "sqlite_append_insight"
+   ],
+   "correct": true,
+   "completion_tokens": 38,
+   "prompt_tokens": 465,
+   "error": null
+  },
+  {
+   "qid": "S107",
+   "query": "Open search software, please help me query detailed information for video ID list [\"dQw4w9WgXcQ\", \"eY52Zsg-KVI\"], including metadata and statistics.",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "youtube_get_video_details"
+   ],
+   "called": [
+    "youtube_get_video_details",
+    "youtube_get_video_engagement_ratio"
+   ],
+   "correct": true,
+   "completion_tokens": 90,
+   "prompt_tokens": 783,
+   "error": null
+  },
+  {
+   "qid": "S108",
+   "query": "Open search software, help me search for videos related to keyword \"artificial intelligence\", return maximum 5 results.",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "youtube_search_videos"
+   ],
+   "called": [
+    "youtube_search_videos"
+   ],
+   "correct": true,
+   "completion_tokens": 30,
+   "prompt_tokens": 764,
+   "error": null
+  },
+  {
+   "qid": "S109",
+   "query": "Open search software, please get English subtitles for video ID [\"dQw4w9WgXcQ\"], if available.",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "youtube_get_transcripts"
+   ],
+   "called": [
+    "youtube_get_transcripts"
+   ],
+   "correct": true,
+   "completion_tokens": 39,
+   "prompt_tokens": 768,
+   "error": null
+  },
+  {
+   "qid": "S110",
+   "query": "Open search software, based on video ID \"eY52Zsg-KVI\", help me recommend maximum 8 related videos.",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "youtube_get_related_videos"
+   ],
+   "called": [
+    "youtube_get_related_videos"
+   ],
+   "correct": true,
+   "completion_tokens": 37,
+   "prompt_tokens": 768,
+   "error": null
+  },
+  {
+   "qid": "S111",
+   "query": "Open search software, please help me query detailed statistics for channel ID list [\"UC_x5XG1OV2P6uZZ5FSM9Ttw\"].",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "youtube_get_channel_statistics"
+   ],
+   "called": [
+    "youtube_get_channel_statistics"
+   ],
+   "correct": true,
+   "completion_tokens": 41,
+   "prompt_tokens": 775,
+   "error": null
+  },
+  {
+   "qid": "S112",
+   "query": "Open search software, give me the top 10 most viewed videos from channel ID \"UC_x5XG1OV2P6uZZ5FSM9Ttw\".",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "youtube_get_channel_top_videos"
+   ],
+   "called": [
+    "youtube_get_channel_top_videos"
+   ],
+   "correct": true,
+   "completion_tokens": 49,
+   "prompt_tokens": 778,
+   "error": null
+  },
+  {
+   "qid": "S113",
+   "query": "Open search software, please calculate engagement ratio for video ID list [\"dQw4w9WgXcQ\", \"eY52Zsg-KVI\"], including likes, comments and other metrics.",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "youtube_get_video_engagement_ratio"
+   ],
+   "called": [
+    "youtube_get_video_engagement_ratio"
+   ],
+   "correct": true,
+   "completion_tokens": 46,
+   "prompt_tokens": 784,
+   "error": null
+  },
+  {
+   "qid": "S114",
+   "query": "Open search software, help me get trending videos in US region (regionCode=US) for category ID 10, return maximum 7 results.",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "youtube_get_trending_videos"
+   ],
+   "called": [
+    "youtube_get_trending_videos"
+   ],
+   "correct": true,
+   "completion_tokens": 38,
+   "prompt_tokens": 772,
+   "error": null
+  },
+  {
+   "qid": "S115",
+   "query": "Open search software, please help me compare data differences for video ID list [\"dQw4w9WgXcQ\", \"eY52Zsg-KVI\"].",
+   "services": [
+    "youtube"
+   ],
+   "gold": [
+    "youtube_compare_videos"
+   ],
+   "called": [
+    "youtube_compare_videos"
+   ],
+   "correct": true,
+   "completion_tokens": 43,
+   "prompt_tokens": 778,
+   "error": null
+  },
+  {
+   "qid": "S116",
+   "query": "Open search software, use keyword \"artificial intelligence\" for web search, return 10 results per page, starting from result 0.",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "brave_brave_web_search"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 25,
+   "prompt_tokens": 1117,
+   "error": null
+  },
+  {
+   "qid": "S117",
+   "query": "Open search software, please help me search for local \"coffee shops\", return maximum 5 results, should it automatically fall back to web search if no results?",
+   "services": [
+    "Brave"
+   ],
+   "gold": [
+    "brave_brave_local_search"
+   ],
+   "called": [
+    "brave_brave_local_search"
+   ],
+   "correct": true,
+   "completion_tokens": 31,
+   "prompt_tokens": 317,
+   "error": null
+  },
+  {
+   "qid": "S118",
+   "query": "Open search software, use Bing to search keyword \"OpenAI ChatGPT\", please return maximum 3 search results.",
+   "services": [
+    "China_location_mcp"
+   ],
+   "gold": [
+    "bing_search_bing_search"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 28,
+   "prompt_tokens": 1112,
+   "error": null
+  },
+  {
+   "qid": "S119",
+   "query": "Open search software, please fetch the webpage content corresponding to search result ID \"bing-result-123\".",
+   "services": [
+    "bing_search"
+   ],
+   "gold": [
+    "bing_search_fetch_webpage"
+   ],
+   "called": [
+    "bing_search_fetch_webpage"
+   ],
+   "correct": true,
+   "completion_tokens": 29,
+   "prompt_tokens": 293,
+   "error": null
+  },
+  {
+   "qid": "S120",
+   "query": "Open search software, please help me query Marvel characters whose names start with \"Spider\", return maximum 10 results.",
+   "services": [
+    "marvel"
+   ],
+   "gold": [
+    "marvel_get_characters"
+   ],
+   "called": [
+    "marvel_get_characters"
+   ],
+   "correct": true,
+   "completion_tokens": 31,
+   "prompt_tokens": 1200,
+   "error": null
+  },
+  {
+   "qid": "S121",
+   "query": "Open search software, query detailed information about Marvel character with ID 1009610.",
+   "services": [
+    "marvel"
+   ],
+   "gold": [
+    "marvel_get_character_by_id"
+   ],
+   "called": [
+    "marvel_get_character_by_id"
+   ],
+   "correct": true,
+   "completion_tokens": 31,
+   "prompt_tokens": 1197,
+   "error": null
+  },
+  {
+   "qid": "S122",
+   "query": "Open search software, query comics for character ID 1009610, limit to maximum 5 results, sorted by publication date.",
+   "services": [
+    "marvel"
+   ],
+   "gold": [
+    "marvel_get_comics_for_character"
+   ],
+   "called": [
+    "marvel_get_comics_for_character"
+   ],
+   "correct": true,
+   "completion_tokens": 45,
+   "prompt_tokens": 1206,
+   "error": null
+  },
+  {
+   "qid": "S123",
+   "query": "Open search software, please help me find comics with title containing \"Avengers\" and digital format, return maximum 20 results.",
+   "services": [
+    "marvel"
+   ],
+   "gold": [
+    "marvel_get_comics"
+   ],
+   "called": [
+    "marvel_get_comics"
+   ],
+   "correct": true,
+   "completion_tokens": 37,
+   "prompt_tokens": 1203,
+   "error": null
+  },
+  {
+   "qid": "S124",
+   "query": "Open search software, query detailed information about comic with ID 82967.",
+   "services": [
+    "marvel"
+   ],
+   "gold": [
+    "marvel_get_comic_by_id"
+   ],
+   "called": [
+    "marvel_get_comic_by_id"
+   ],
+   "correct": true,
+   "completion_tokens": 30,
+   "prompt_tokens": 1194,
+   "error": null
+  },
+  {
+   "qid": "S125",
+   "query": "Open search software, query all characters in comic with ID 82967, return maximum 10 results.",
+   "services": [
+    "marvel"
+   ],
+   "gold": [
+    "marvel_get_characters_for_comic"
+   ],
+   "called": [
+    "marvel_get_characters_for_comic"
+   ],
+   "correct": true,
+   "completion_tokens": 37,
+   "prompt_tokens": 1201,
+   "error": null
+  },
+  {
+   "qid": "S126",
+   "query": "Please retrieve information related to how to configure an S3 bucket from the AWS knowledge base (ID: kb-123456). Return up to 3 results. Also, open the search engine.",
+   "services": [
+    "AWS"
+   ],
+   "gold": [
+    "aws_retrieve_from_aws_kb"
+   ],
+   "called": [
+    "aws_retrieve_from_aws_kb"
+   ],
+   "correct": true,
+   "completion_tokens": 52,
+   "prompt_tokens": 266,
+   "error": null
+  },
+  {
+   "qid": "S127",
+   "query": "Please help me search for files in Google Drive with keyword \"project report\". Is there corresponding search software?",
+   "services": [
+    "GoogleDrive"
+   ],
+   "gold": [
+    "googledrive_search"
+   ],
+   "called": [
+    "googledrive_search"
+   ],
+   "correct": true,
+   "completion_tokens": 23,
+   "prompt_tokens": 219,
+   "error": null
+  },
+  {
+   "qid": "S128",
+   "query": "Open financial tools, please tell me the current stock price of stock symbol RELIANCE.NS.",
+   "services": [
+    "stock"
+   ],
+   "gold": [
+    "stock_get_stock_quote"
+   ],
+   "called": [
+    "stock_get_stock_quote"
+   ],
+   "correct": true,
+   "completion_tokens": 26,
+   "prompt_tokens": 314,
+   "error": null
+  },
+  {
+   "qid": "S129",
+   "query": "Open financial tools, I want to view daily historical data for stock symbol RELIANCE.NS.",
+   "services": [
+    "stock"
+   ],
+   "gold": [
+    "stock_get_historical_data"
+   ],
+   "called": [
+    "stock_get_historical_data"
+   ],
+   "correct": true,
+   "completion_tokens": 33,
+   "prompt_tokens": 314,
+   "error": null
+  },
+  {
+   "qid": "S130",
+   "query": "Open financial tools, I want to know the price of palladium (XPD) on December 12, 2023, priced in euros (EUR).",
+   "services": [
+    "gold_price"
+   ],
+   "gold": [
+    "gold_price_get_gold_price"
+   ],
+   "called": [
+    "gold_price_get_gold_price"
+   ],
+   "correct": true,
+   "completion_tokens": 43,
+   "prompt_tokens": 288,
+   "error": null
+  },
+  {
+   "qid": "S131",
+   "query": "Use browser automation tools, based on Puppeteer, please open the webpage https://example.com in the browser.",
+   "services": [
+    "puppeteer"
+   ],
+   "gold": [
+    "puppeteer_puppeteer_navigate"
+   ],
+   "called": [
+    "puppeteer_puppeteer_navigate"
+   ],
+   "correct": true,
+   "completion_tokens": 36,
+   "prompt_tokens": 667,
+   "error": null
+  },
+  {
+   "qid": "S132",
+   "query": "Use browser automation tools, based on Puppeteer, take a screenshot of the webpage with width 1024 and height 768, named screenshot_home.png",
+   "services": [
+    "puppeteer"
+   ],
+   "gold": [
+    "puppeteer_puppeteer_screenshot"
+   ],
+   "called": [
+    "puppeteer_puppeteer_navigate",
+    "puppeteer_puppeteer_screenshot"
+   ],
+   "correct": false,
+   "completion_tokens": 83,
+   "prompt_tokens": 679,
+   "error": null
+  },
+  {
+   "qid": "S133",
+   "query": "Use browser automation tools, based on Puppeteer, help me click the button on the page, the selector is #submit-button",
+   "services": [
+    "puppeteer"
+   ],
+   "gold": [
+    "puppeteer_puppeteer_click"
+   ],
+   "called": [
+    "puppeteer_puppeteer_click"
+   ],
+   "correct": true,
+   "completion_tokens": 26,
+   "prompt_tokens": 670,
+   "error": null
+  },
+  {
+   "qid": "S134",
+   "query": "Open the browser tool and hover the mouse over the element with the ID #menu-item.",
+   "services": [
+    "puppeteer"
+   ],
+   "gold": [
+    "puppeteer_puppeteer_hover"
+   ],
+   "called": [
+    "puppeteer_puppeteer_navigate",
+    "puppeteer_puppeteer_hover"
+   ],
+   "correct": false,
+   "completion_tokens": 62,
+   "prompt_tokens": 663,
+   "error": null
+  },
+  {
+   "qid": "S135",
+   "query": "Open the browser tool and enter the text chatgpt_user into the input field with the ID #username.",
+   "services": [
+    "ding_talk"
+   ],
+   "gold": [
+    "puppeteer_puppeteer_fill"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 40,
+   "prompt_tokens": 508,
+   "error": null
+  },
+  {
+   "qid": "S136",
+   "query": "Open the browser tool and select 中文 from the dropdown menu with the ID #language.",
+   "services": [
+    "puppeteer"
+   ],
+   "gold": [
+    "puppeteer_puppeteer_select"
+   ],
+   "called": [
+    "puppeteer_puppeteer_navigate",
+    "puppeteer_puppeteer_select"
+   ],
+   "correct": false,
+   "completion_tokens": 67,
+   "prompt_tokens": 663,
+   "error": null
+  },
+  {
+   "qid": "S137",
+   "query": "Open the browser tool, then use puppeteer+puppeteer_evaluate to execute the JavaScript code document.title in the browser.",
+   "services": [
+    "puppeteer"
+   ],
+   "gold": [
+    "puppeteer_puppeteer_evaluate"
+   ],
+   "called": [
+    "puppeteer_puppeteer_navigate"
+   ],
+   "correct": false,
+   "completion_tokens": 35,
+   "prompt_tokens": 670,
+   "error": null
+  },
+  {
+   "qid": "S138",
+   "query": "Use browser automation tools to crawl the content of the website https://www.google.com.",
+   "services": [
+    "puppeteer"
+   ],
+   "gold": [
+    "fetch_fetch"
+   ],
+   "called": [
+    "puppeteer_puppeteer_navigate"
+   ],
+   "correct": false,
+   "completion_tokens": 37,
+   "prompt_tokens": 662,
+   "error": null
+  },
+  {
+   "qid": "S139",
+   "query": "Open file operation tools, please help me generate an image with description \"seaside at sunset\", width 512, height 512, sampling steps 50, guidance scale 7.5, and do not include \"haze\".",
+   "services": [
+    "image_mcp"
+   ],
+   "gold": [
+    "image_mcp_generate_image"
+   ],
+   "called": [
+    "image_mcp_generate_image"
+   ],
+   "correct": true,
+   "completion_tokens": 70,
+   "prompt_tokens": 446,
+   "error": null
+  },
+  {
+   "qid": "S140",
+   "query": "Open file operation tools, please help me save an image, image URL is https://example.com/generated/sample.png, original description is \"seaside at sunset\".",
+   "services": [
+    "image_mcp"
+   ],
+   "gold": [
+    "image_mcp_save_image"
+   ],
+   "called": [
+    "image_mcp_save_image"
+   ],
+   "correct": true,
+   "completion_tokens": 39,
+   "prompt_tokens": 426,
+   "error": null
+  },
+  {
+   "qid": "S141",
+   "query": "Open file operation tools, please help me list all saved images and their metadata.",
+   "services": [
+    "image_mcp"
+   ],
+   "gold": [
+    "image_mcp_list_saved_images"
+   ],
+   "called": [
+    "image_mcp_list_saved_images"
+   ],
+   "correct": true,
+   "completion_tokens": 20,
+   "prompt_tokens": 410,
+   "error": null
+  },
+  {
+   "qid": "S142",
+   "query": "Open file operation tools, please read local PDF file at path /pdfs/document.pdf.",
+   "services": [
+    "pdf_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_local_pdf"
+   ],
+   "called": [
+    "pdf_mcp_read_local_pdf"
+   ],
+   "correct": true,
+   "completion_tokens": 27,
+   "prompt_tokens": 300,
+   "error": null
+  },
+  {
+   "qid": "S143",
+   "query": "Open file operation tools, please open and extract content from this PDF file: https://example.com/document.pdf.",
+   "services": [
+    "pdf_mcp"
+   ],
+   "gold": [
+    "pdf_mcp_read_pdf_url"
+   ],
+   "called": [
+    "pdf_mcp_read_pdf_url"
+   ],
+   "correct": true,
+   "completion_tokens": 29,
+   "prompt_tokens": 304,
+   "error": null
+  },
+  {
+   "qid": "S144",
+   "query": "Do you have file operation tools? Please help me analyze the structure of Excel file /data/files/report.xlsx with 2 header rows.",
+   "services": [
+    "excel_mcp"
+   ],
+   "gold": [
+    "excel_mcp_analyze_excel_structure"
+   ],
+   "called": [
+    "excel_mcp_analyze_excel_structure"
+   ],
+   "correct": true,
+   "completion_tokens": 36,
+   "prompt_tokens": 797,
+   "error": null
+  },
+  {
+   "qid": "S145",
+   "query": "Do you have file operation tools? Please export the structure of Excel file /data/files/source.xlsx to /data/templates/template.xlsx with 1 header row.",
+   "services": [
+    "excel_mcp"
+   ],
+   "gold": [
+    "excel_mcp_export_excel_structure"
+   ],
+   "called": [
+    "excel_mcp_export_excel_structure"
+   ],
+   "correct": true,
+   "completion_tokens": 45,
+   "prompt_tokens": 801,
+   "error": null
+  },
+  {
+   "qid": "S146",
+   "query": "Do you have file operation tools? Please read all sheet names in Excel file /data/files/data.xlsx.",
+   "services": [
+    "excel_mcp"
+   ],
+   "gold": [
+    "excel_mcp_read_sheet_names"
+   ],
+   "called": [
+    "excel_mcp_read_sheet_names"
+   ],
+   "correct": true,
+   "completion_tokens": 28,
+   "prompt_tokens": 791,
+   "error": null
+  },
+  {
+   "qid": "S147",
+   "query": "Do you have file operation tools? Please read data from Sheet1 in Excel file /data/files/data.xlsx, headers in row 1, data starts from row 2.",
+   "services": [
+    "excel_mcp"
+   ],
+   "gold": [
+    "excel_mcp_read_data_by_sheet_name"
+   ],
+   "called": [
+    "excel_mcp_read_data_by_sheet_name"
+   ],
+   "correct": true,
+   "completion_tokens": 53,
+   "prompt_tokens": 805,
+   "error": null
+  },
+  {
+   "qid": "S148",
+   "query": "Use file operation tools, please read data from all sheets in Excel file /data/files/data.xlsx, headers in row 1, data starts from row 2.",
+   "services": [
+    "excel_mcp"
+   ],
+   "gold": [
+    "excel_mcp_read_sheet_data"
+   ],
+   "called": [
+    "excel_mcp_read_sheet_data"
+   ],
+   "correct": true,
+   "completion_tokens": 43,
+   "prompt_tokens": 803,
+   "error": null
+  },
+  {
+   "qid": "S149",
+   "query": "Use file operation tools, please write data to Sheet2 in Excel file /data/files/data.xlsx, data is [{\"name\": \"Zhang San\", \"score\": 90}, {\"name\": \"Li Si\", \"score\": 85}].",
+   "services": [
+    "excel_mcp"
+   ],
+   "gold": [
+    "excel_mcp_write_data_by_sheet_name"
+   ],
+   "called": [
+    "excel_mcp_write_data_by_sheet_name"
+   ],
+   "correct": true,
+   "completion_tokens": 71,
+   "prompt_tokens": 822,
+   "error": null
+  },
+  {
+   "qid": "S150",
+   "query": "Use file operation tools, please write data to new Excel file /data/files/new_data.xlsx, data format is {\"Sheet1\": [{\"id\": 1, \"value\": 100}], \"Sheet2\": [{\"id\": 2, \"value\": 200}]}.",
+   "services": [
+    "excel_mcp"
+   ],
+   "gold": [
+    "excel_mcp_write_sheet_data"
+   ],
+   "called": [
+    "excel_mcp_write_sheet_data"
+   ],
+   "correct": true,
+   "completion_tokens": 70,
+   "prompt_tokens": 829,
+   "error": null
+  },
+  {
+   "qid": "S151",
+   "query": "Use file operation tools, please clear the cache of Excel file /data/files/data.xlsx.",
+   "services": [
+    "excel_mcp"
+   ],
+   "gold": [
+    "excel_mcp_clear_file_cache"
+   ],
+   "called": [
+    "excel_mcp_clear_file_cache"
+   ],
+   "correct": true,
+   "completion_tokens": 28,
+   "prompt_tokens": 788,
+   "error": null
+  },
+  {
+   "qid": "S152",
+   "query": "Use file operation tools, please help me read the file content at path /home/user/docs/readme.txt.",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_read_file"
+   ],
+   "called": [
+    "gitlab_mcp_get_file_contents"
+   ],
+   "correct": false,
+   "completion_tokens": 40,
+   "prompt_tokens": 1042,
+   "error": null
+  },
+  {
+   "qid": "S153",
+   "query": "Use file operation tools, please read multiple files simultaneously: /etc/hosts and /var/log/syslog content.",
+   "services": [
+    "file_system_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_read_multiple_files"
+   ],
+   "called": [
+    "file_system_mcp_read_multiple_files"
+   ],
+   "correct": true,
+   "completion_tokens": 35,
+   "prompt_tokens": 837,
+   "error": null
+  },
+  {
+   "qid": "S154",
+   "query": "Use file operation tools, please create or overwrite file /tmp/test.txt with content \"This is a test file, please confirm successful write\".",
+   "services": [
+    "file_system_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_write_file"
+   ],
+   "called": [
+    "file_system_mcp_write_file"
+   ],
+   "correct": true,
+   "completion_tokens": 41,
+   "prompt_tokens": 842,
+   "error": null
+  },
+  {
+   "qid": "S155",
+   "query": "Use file operation tools, please replace all \"print\" with \"logger.info\" in file /home/user/script.py and preview the modification results first.",
+   "services": [
+    "code_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_edit_file"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 128,
+   "prompt_tokens": 1565,
+   "error": null
+  },
+  {
+   "qid": "S156",
+   "query": "Use file operation tools, please help me create directory /data/project/output, no error if directory already exists.",
+   "services": [
+    "file_system_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_create_directory"
+   ],
+   "called": [
+    "file_system_mcp_create_directory"
+   ],
+   "correct": true,
+   "completion_tokens": 26,
+   "prompt_tokens": 836,
+   "error": null
+  },
+  {
+   "qid": "S157",
+   "query": "Use file operation tools, please list all files and folders in directory /var/www/html.",
+   "services": [
+    "file_system_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_list_directory"
+   ],
+   "called": [
+    "file_system_mcp_list_directory"
+   ],
+   "correct": true,
+   "completion_tokens": 26,
+   "prompt_tokens": 832,
+   "error": null
+  },
+  {
+   "qid": "S158",
+   "query": "Use file operation tools, please move file /tmp/old.txt to /home/user/new.txt.",
+   "services": [
+    "file_system_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_move_file"
+   ],
+   "called": [
+    "file_system_mcp_move_file"
+   ],
+   "correct": true,
+   "completion_tokens": 36,
+   "prompt_tokens": 834,
+   "error": null
+  },
+  {
+   "qid": "S159",
+   "query": "Use file operation tools, please recursively search for all files with .log extension in /home/user directory, excluding node_modules directory.",
+   "services": [
+    "file_system_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_search_files"
+   ],
+   "called": [
+    "file_system_mcp_search_files"
+   ],
+   "correct": true,
+   "completion_tokens": 40,
+   "prompt_tokens": 840,
+   "error": null
+  },
+  {
+   "qid": "S160",
+   "query": "Use file operation tools, please get detailed information (size, creation time, permissions, etc.) of file /etc/passwd.",
+   "services": [
+    "file_system_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_get_file_info"
+   ],
+   "called": [
+    "file_system_mcp_get_file_info"
+   ],
+   "correct": true,
+   "completion_tokens": 27,
+   "prompt_tokens": 840,
+   "error": null
+  },
+  {
+   "qid": "S161",
+   "query": "Use file operation tools, please tell me which directories are allowed to access on the server?",
+   "services": [
+    "file_system_mcp"
+   ],
+   "gold": [
+    "file_system_mcp_list_allowed_directories"
+   ],
+   "called": [
+    "file_system_mcp_list_allowed_directories"
+   ],
+   "correct": true,
+   "completion_tokens": 22,
+   "prompt_tokens": 832,
+   "error": null
+  },
+  {
+   "qid": "S162",
+   "query": "Do you have file operation tools? Please read the Word file content at /home/user/docs/resume.docx.",
+   "services": [
+    "docx_mcp"
+   ],
+   "gold": [
+    "docx_mcp_read_docx"
+   ],
+   "called": [
+    "docx_mcp_read_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 31,
+   "prompt_tokens": 475,
+   "error": null
+  },
+  {
+   "qid": "S163",
+   "query": "Do you have file operation tools? Please create a Word document at path /home/user/docs/summary.docx with content: \"This is a meeting summary containing main discussion points.\"",
+   "services": [
+    "docx_mcp"
+   ],
+   "gold": [
+    "docx_mcp_write_docx"
+   ],
+   "called": [
+    "docx_mcp_write_docx"
+   ],
+   "correct": true,
+   "completion_tokens": 46,
+   "prompt_tokens": 488,
+   "error": null
+  },
+  {
+   "qid": "S164",
+   "query": "Do you have file operation tools? Please replace \"old plan\" with \"new solution\" in paragraph 2 of /home/user/docs/plan.docx.",
+   "services": [
+    "sqlite"
+   ],
+   "gold": [
+    "docx_mcp_edit_docx_paragraph"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 38,
+   "prompt_tokens": 467,
+   "error": null
+  },
+  {
+   "qid": "S165",
+   "query": "Do you have file operation tools? Please add a paragraph \"This week mainly completed development tasks\" to the end of /home/user/docs/weekly_report.docx.",
+   "services": [
+    "sqlite"
+   ],
+   "gold": [
+    "docx_mcp_edit_docx_insert"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 59,
+   "prompt_tokens": 468,
+   "error": null
+  },
+  {
+   "qid": "S166",
+   "query": "Do you have GitHub file operation tools? Please help me update file path=README.md in repository owner=octocat, repo=hello-world on branch=main, commit message is \"Update README\", content is \"This is the latest README file content\".",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_create_or_update_file"
+   ],
+   "called": [
+    "github_mcp_create_or_update_file"
+   ],
+   "correct": true,
+   "completion_tokens": 66,
+   "prompt_tokens": 2217,
+   "error": null
+  },
+  {
+   "qid": "S167",
+   "query": "Do you have GitHub file operation tools? I want to commit multiple files in repository owner=octocat, repo=hello-world on branch=dev, commit message is \"Batch upload\", files include path=index.js with content \"console.log('hello')\", and path=app.py with content \"print('app')\".",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_push_files"
+   ],
+   "called": [
+    "github_mcp_push_files"
+   ],
+   "correct": true,
+   "completion_tokens": 82,
+   "prompt_tokens": 2230,
+   "error": null
+  },
+  {
+   "qid": "S168",
+   "query": "Do you have GitHub file operation tools? Please help me search GitHub repositories with keyword \"machine learning\", first page, 30 results per page.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_search_repositories"
+   ],
+   "called": [
+    "github_mcp_search_repositories"
+   ],
+   "correct": true,
+   "completion_tokens": 39,
+   "prompt_tokens": 2195,
+   "error": null
+  },
+  {
+   "qid": "S169",
+   "query": "Do you have GitHub file operation tools? Please help me create a new repository named \"test-repo\", description is \"Test repository\", set as private repository, and auto-initialize.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_create_repository"
+   ],
+   "called": [
+    "github_mcp_create_repository"
+   ],
+   "correct": true,
+   "completion_tokens": 43,
+   "prompt_tokens": 2202,
+   "error": null
+  },
+  {
+   "qid": "S170",
+   "query": "Do you have GitHub file operation tools? Please get file contents of repository owner=octocat, repo=hello-world, path=src/main.py, branch=dev.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_get_file_contents"
+   ],
+   "called": [
+    "github_mcp_get_file_contents"
+   ],
+   "correct": true,
+   "completion_tokens": 47,
+   "prompt_tokens": 2200,
+   "error": null
+  },
+  {
+   "qid": "S171",
+   "query": "Do you have GitHub file operation tools? I want to create an issue in repository owner=octocat, repo=hello-world, title is \"Bug Report\", content is \"Program crashes during runtime\", assign to user \"alice\", and add label \"bug\".",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_create_issue"
+   ],
+   "called": [
+    "github_mcp_create_issue"
+   ],
+   "correct": true,
+   "completion_tokens": 62,
+   "prompt_tokens": 2218,
+   "error": null
+  },
+  {
+   "qid": "S172",
+   "query": "Do you have GitHub file operation tools? Please help me create a pull request for repository owner=octocat, repo=hello-world, title is \"Fix login bug\", content is \"Fixed login exception\", source branch head=fix-login, target branch base=main, allow maintainer edits, not draft.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_create_pull_request"
+   ],
+   "called": [
+    "github_mcp_create_pull_request"
+   ],
+   "correct": true,
+   "completion_tokens": 75,
+   "prompt_tokens": 2228,
+   "error": null
+  },
+  {
+   "qid": "S173",
+   "query": "Do you have GitHub file operation tools? Please help me fork repository owner=octocat, repo=hello-world to organization=my-org.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_fork_repository"
+   ],
+   "called": [
+    "github_mcp_fork_repository"
+   ],
+   "correct": true,
+   "completion_tokens": 40,
+   "prompt_tokens": 2193,
+   "error": null
+  },
+  {
+   "qid": "S174",
+   "query": "Do you have GitHub file operation tools? I want to create a new branch=feature-x in repository owner=octocat, repo=hello-world, based on branch from_branch=main.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_create_branch"
+   ],
+   "called": [
+    "github_mcp_create_branch"
+   ],
+   "correct": true,
+   "completion_tokens": 46,
+   "prompt_tokens": 2204,
+   "error": null
+  },
+  {
+   "qid": "S175",
+   "query": "Do you have GitHub file operation tools? Please list issues in repository owner=octocat, repo=hello-world with state=open, labels containing \"bug\", sorted by creation time descending, first page 30 items.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_list_issues"
+   ],
+   "called": [
+    "github_mcp_list_issues"
+   ],
+   "correct": true,
+   "completion_tokens": 121,
+   "prompt_tokens": 2210,
+   "error": null
+  },
+  {
+   "qid": "S176",
+   "query": "Do you have GitHub file operation tools? Please update issue_number=42 in repository owner=octocat, repo=hello-world, change title to \"Optimize UI\", content to \"Adjusted page layout\", state to closed, assign to user \"bob\".",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_update_issue"
+   ],
+   "called": [
+    "github_mcp_update_issue"
+   ],
+   "correct": true,
+   "completion_tokens": 70,
+   "prompt_tokens": 2218,
+   "error": null
+  },
+  {
+   "qid": "S177",
+   "query": "Do you have GitHub file operation tools? I want to add a comment to issue_number=42 in repository owner=octocat, repo=hello-world, content is \"This issue has been fixed, please confirm.\"",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_add_issue_comment"
+   ],
+   "called": [
+    "github_mcp_add_issue_comment"
+   ],
+   "correct": true,
+   "completion_tokens": 55,
+   "prompt_tokens": 2210,
+   "error": null
+  },
+  {
+   "qid": "S178",
+   "query": "Do you have GitHub file operation tools? Please help me search GitHub code with keyword \"def train\", sort by relevance, 30 items per page, first page.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_search_code"
+   ],
+   "called": [
+    "github_mcp_search_code"
+   ],
+   "correct": true,
+   "completion_tokens": 45,
+   "prompt_tokens": 2199,
+   "error": null
+  },
+  {
+   "qid": "S179",
+   "query": "Do you have GitHub file operation tools? Please help me search GitHub issues and pull requests with title or content containing \"login error\", sort by creation time, descending, 30 items per page, first page.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_search_issues"
+   ],
+   "called": [
+    "github_mcp_search_issues"
+   ],
+   "correct": true,
+   "completion_tokens": 50,
+   "prompt_tokens": 2208,
+   "error": null
+  },
+  {
+   "qid": "S180",
+   "query": "Do you have GitHub file operation tools? Please help me search GitHub users with keyword \"data scientist\", sort by relevance, first page 30 items.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_search_users"
+   ],
+   "called": [
+    "github_mcp_search_users"
+   ],
+   "correct": true,
+   "completion_tokens": 39,
+   "prompt_tokens": 2196,
+   "error": null
+  },
+  {
+   "qid": "S181",
+   "query": "Do you have GitHub file operation tools? Please list commit records on repository owner=octocat, repo=hello-world branch, first page 30 items, sha=master.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_list_commits"
+   ],
+   "called": [
+    "github_mcp_list_commits"
+   ],
+   "correct": true,
+   "completion_tokens": 53,
+   "prompt_tokens": 2202,
+   "error": null
+  },
+  {
+   "qid": "S182",
+   "query": "Do you have GitHub file operation tools? Please get detailed information of issue_number=42 in repository owner=octocat, repo=hello-world.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_get_issue"
+   ],
+   "called": [
+    "github_mcp_get_issue"
+   ],
+   "correct": true,
+   "completion_tokens": 40,
+   "prompt_tokens": 2196,
+   "error": null
+  },
+  {
+   "qid": "S183",
+   "query": "Do you have GitHub file operation tools? Please get pull request details of pull_number=10 in repository owner=octocat, repo=hello-world.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_get_pull_request"
+   ],
+   "called": [
+    "github_mcp_get_pull_request"
+   ],
+   "correct": true,
+   "completion_tokens": 41,
+   "prompt_tokens": 2197,
+   "error": null
+  },
+  {
+   "qid": "S184",
+   "query": "Do you have GitHub file operation tools? Please list pull requests with state=open in repository owner=octocat, repo=hello-world, sorted by creation time descending, 30 items per page, first page.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_list_pull_requests"
+   ],
+   "called": [
+    "github_mcp_list_pull_requests"
+   ],
+   "correct": true,
+   "completion_tokens": 98,
+   "prompt_tokens": 2209,
+   "error": null
+  },
+  {
+   "qid": "S185",
+   "query": "Do you have GitHub file operation tools? I want to create a review for pull_number=10 in repository owner=octocat, repo=hello-world, content is \"Code needs optimization\", event type is approve.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_create_pull_request_review"
+   ],
+   "called": [
+    "github_mcp_create_pull_request_review"
+   ],
+   "correct": true,
+   "completion_tokens": 56,
+   "prompt_tokens": 2210,
+   "error": null
+  },
+  {
+   "qid": "S186",
+   "query": "Do you have GitHub file operation tools? Please help me merge pull_number=10 in repository owner=octocat, repo=hello-world, merge method is squash, commit title \"Merge fix\".",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_merge_pull_request"
+   ],
+   "called": [
+    "github_mcp_merge_pull_request"
+   ],
+   "correct": true,
+   "completion_tokens": 57,
+   "prompt_tokens": 2206,
+   "error": null
+  },
+  {
+   "qid": "S187",
+   "query": "Do you have GitHub file operation tools? Please get the list of modified files in pull_number=10 of repository owner=octocat, repo=hello-world.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_get_pull_request_files"
+   ],
+   "called": [
+    "github_mcp_get_pull_request_files"
+   ],
+   "correct": true,
+   "completion_tokens": 42,
+   "prompt_tokens": 2199,
+   "error": null
+  },
+  {
+   "qid": "S188",
+   "query": "Do you have GitHub file operation tools? Please check the status of pull_number=10 in repository owner=octocat, repo=hello-world.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_get_pull_request_status"
+   ],
+   "called": [
+    "github_mcp_get_pull_request_status"
+   ],
+   "correct": true,
+   "completion_tokens": 42,
+   "prompt_tokens": 2196,
+   "error": null
+  },
+  {
+   "qid": "S189",
+   "query": "Do you have GitHub file operation tools? Please update the branch of pull_number=10 in repository owner=octocat, repo=hello-world, expected latest commit SHA is abc123.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_update_pull_request_branch"
+   ],
+   "called": [
+    "github_mcp_update_pull_request_branch"
+   ],
+   "correct": true,
+   "completion_tokens": 53,
+   "prompt_tokens": 2206,
+   "error": null
+  },
+  {
+   "qid": "S190",
+   "query": "Do you have GitHub file operation tools? Please get review comments of pull_number=10 in repository owner=octocat, repo=hello-world.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_get_pull_request_comments"
+   ],
+   "called": [
+    "github_mcp_get_pull_request_comments"
+   ],
+   "correct": true,
+   "completion_tokens": 42,
+   "prompt_tokens": 2196,
+   "error": null
+  },
+  {
+   "qid": "S191",
+   "query": "Do you have GitHub file operation tools? Please list all review records of pull_number=10 in repository owner=octocat, repo=hello-world.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "github_mcp_get_pull_request_reviews"
+   ],
+   "called": [
+    "github_mcp_get_pull_request_reviews"
+   ],
+   "correct": true,
+   "completion_tokens": 42,
+   "prompt_tokens": 2197,
+   "error": null
+  },
+  {
+   "qid": "S192",
+   "query": "Do you have GitLab file operation tools? Please help me create or update file path/to/file.txt in project ID 123 on branch dev, content is \"Hello World\", commit message is \"Update file content\".",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "gitlab_mcp_create_or_update_file"
+   ],
+   "called": [
+    "gitlab_mcp_create_or_update_file"
+   ],
+   "correct": true,
+   "completion_tokens": 61,
+   "prompt_tokens": 1065,
+   "error": null
+  },
+  {
+   "qid": "S193",
+   "query": "Do you have GitLab file operation tools? I want to push two files to project ID 456 on branch master, one is src/main.py with content print('hello'), another is README.md with content project description, commit message is \"Submit new code\".",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "gitlab_mcp_push_files"
+   ],
+   "called": [
+    "gitlab_mcp_push_files"
+   ],
+   "correct": true,
+   "completion_tokens": 79,
+   "prompt_tokens": 1074,
+   "error": null
+  },
+  {
+   "qid": "S194",
+   "query": "Do you have GitLab file operation tools? Please help me search code repositories containing keyword \"fastapi\", first page, 20 items per page.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "gitlab_mcp_search_repositories"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 39,
+   "prompt_tokens": 2196,
+   "error": null
+  },
+  {
+   "qid": "S195",
+   "query": "Do you have GitLab file operation tools? Help me create a new code repository named \"my-new-project\", description is \"This is a test repository\", repository permission set to public, and initialize README file.",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "gitlab_mcp_create_repository"
+   ],
+   "called": [
+    "gitlab_mcp_create_repository"
+   ],
+   "correct": true,
+   "completion_tokens": 50,
+   "prompt_tokens": 1062,
+   "error": null
+  },
+  {
+   "qid": "S196",
+   "query": "Do you have GitLab file operation tools? Please get file content at path docs/readme.md in project ID 789 repository, branch is main.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "gitlab_mcp_get_file_contents"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 36,
+   "prompt_tokens": 2197,
+   "error": null
+  },
+  {
+   "qid": "S197",
+   "query": "Do you have GitLab file operation tools? Create a new issue in project ID 321 repository, title is \"Fix login bug\", description is \"Login will show 500 error\", assign to user ID 10 and 12, labels are bug and urgent.",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "gitlab_mcp_create_issue"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 32,
+   "prompt_tokens": 2224,
+   "error": null
+  },
+  {
+   "qid": "S198",
+   "query": "Do you have GitLab file operation tools? Please create a merge request in project ID 654 repository, title is \"Merge feature branch\", description \"Add new feature\", source branch is feature, target branch is main, set as draft status, allow collaboration.",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "gitlab_mcp_create_merge_request"
+   ],
+   "called": [
+    "gitlab_mcp_create_merge_request"
+   ],
+   "correct": true,
+   "completion_tokens": 71,
+   "prompt_tokens": 1074,
+   "error": null
+  },
+  {
+   "qid": "S199",
+   "query": "Do you have GitLab file operation tools? Help me fork project ID 987 repository to namespace \"team-alpha\".",
+   "services": [
+    "github_mcp"
+   ],
+   "gold": [
+    "gitlab_mcp_fork_repository"
+   ],
+   "called": [],
+   "correct": false,
+   "completion_tokens": 34,
+   "prompt_tokens": 2190,
+   "error": null
+  },
+  {
+   "qid": "S200",
+   "query": "Do you have GitLab file operation tools? Create new branch \"release-1.0\" in project ID 555 repository, based on branch \"develop\".",
+   "services": [
+    "gitlab_mcp"
+   ],
+   "gold": [
+    "gitlab_mcp_create_branch"
+   ],
+   "called": [
+    "gitlab_mcp_create_branch"
+   ],
+   "correct": true,
+   "completion_tokens": 43,
+   "prompt_tokens": 1054,
+   "error": null
+  }
+ ]
+}
